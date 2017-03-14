@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1"> <!-- changes width based on viewing device -->
+		<title>Account Management</title>
+		<link type="text/css" rel="stylesheet" href="style/base.css">
+		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Russo+One" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Hammersmith+One" rel="stylesheet">
+		
+		<script>
+		var active = document.querySelector(".page-load");
+		active.classList.remove("page-load");
+		</script>
+	</head>
+	<body>
+		<div class="page"> <!-- Wrapper class for entire page. -->
+			<div class="header"> <!-- Wrapper class for header that is full page width. -->
+				<div class="header-centre"> <!-- Div centres contents. -->
+					
+					<div class="image-menu"> <!-- Div groups logo, name, and menu. -->
+						<div class="sitelogo-cont"> <!-- Div contains logo. -->
+							<a href="index.html"><img src="forumImages/logo2.png" alt="Site Logo" height="120" width="180" id="site-logo"></a> <!-- Hyperlinked logo -->
+						</div>
+						<div class="sitename"> <!-- Div contains name. -->
+							<h1>Project Hamster</h1>
+						</div>
+						<div class="menu-links fade-link"> <!-- Div containing menu button. -->
+							<ul>
+								<li><a href="index.html" id="home-button">Home</a></li>
+								<li><a href="about.html" id="about-button">About</a></li>
+								<li><a href="forum.html" id="forum-button">Forum</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="body"> <!-- Unique contents of each page go in here. -->
+				<div class="body-centre"> <!-- Majority of contents will go in here as it is centred -->
+					<div id="account_info"> 
+					
+						<h1>Account Info</h1>		
+						
+						<!-- The user's avatar image. -->
+						<div id="avatar"> 
+							<img src="forumImages/placeholder_avatar.jpg" alt="Username's Avatar">
+						</div>
+						
+						<!-- The user's username and password. -->
+						<p>Username: <br>
+						username</p>		
+						<p>Email: <br>
+						user@email.com</p>
+							
+					</div>
+				
+					<!-- Where the user can make changes to their account. -->
+					<div id="make_changes"> 
+						
+						<!-- Where the user changes the avatar image. -->
+						<h2>Change Avatar Image</h2> 
+						<form method="post" action="http://webdevfoundations.net/scripts/formdemo.asp">		
+							<label for="new_image">New Image: </label><br>
+							<input type="file" id="new_image" name="New Avatar Image"><br>
+							<input type="submit" value="Submit">		
+						</form>
+						
+						<!-- Where the user changes the email and/or password. -->	
+						<h2>Change Email or Password</h2> 	
+						<form method="post" action="http://webdevfoundations.net/scripts/formdemo.asp">
+							<label for="new_email">New Email: </label><br>
+							<input type="text" id="new_email" name="New Email" value=""><br>
+							
+							<label for="new_password">New Password: </label><br>
+							<input type="password" id="new_password" name="New Password" value=""><br>
+							
+							<label for="current_password">Current Password: </label><br>
+							<input type="password" id="current_password" name="Original Password (Email/Password Change)" value=""><br>
+							
+							<input type="submit" value="Submit">
+						</form>
+						
+						<!-- Where the user deletes the account. -->
+						<h2>Delete Account</h2> 
+						<form method="post" action="http://webdevfoundations.net/scripts/formdemo.asp">
+							<label for="deletion_password">Current Password: </label><br>
+							<input type="password" id="deletion_password" name="Original Password (Account Deletion)" value=""><br>
+							<input type="submit" value="Warning! This cannot be undone!">		
+						</form>
+						
+					</div>
+				
+				</div>
+			</div>
+			<div class="footer"> <!-- Full width container for the footer -->
+				<div class="footer-centre"> <!-- Centered footer for other footer divs -->
+					<a href="index.html" id="home-small">Home</a>
+					<a href="about.html" id="about-small">About - Terms and Conditions - Privacy Policy</a>
+					<a href="forum.html" id="forum-small">Forum</a>
+					<a href="account.html" id="account-manage-small">Account Management</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

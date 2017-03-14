@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1"> <!-- changes width based on viewing device -->
+		<title>View Post Discussion</title>
+		<link type="text/css" rel="stylesheet" href="style/base.css">
+		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Russo+One" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Hammersmith+One" rel="stylesheet">
+		
+		<script>
+		var active = document.querySelector(".page-load");
+		active.classList.remove("page-load");
+		</script>
+	</head>
+	<body>
+		<div class="page"> <!-- Wrapper class for entire page. -->
+			<div class="header"> <!-- Wrapper class for header that is full page width. -->
+				<div class="header-centre"> <!-- Div centres contents. -->
+					<div class="login"> <!-- Div containing login form. -->
+						<form class="login-form" method="post" action="http://webdevfoundations.net/scripts/formdemo.asp">
+							<input type="text" class="input" data-type="text" id="username" placeholder="username" name="username" required="required">
+							<input type="password" class="input" data-type="text" id="password" placeholder="password" name="password" required="required">
+							<br>
+							<input value="Log In" class="input2" type="submit" id="login-button">
+							<input value="Register" class="input2" type="submit" id="register-button">
+							<input value="Forgot Password" class="input2" type="submit" id="forgot-button">
+						</form>
+					</div>
+					<div class="image-menu"> <!-- Div groups logo, name, and menu. -->
+						<div class="sitelogo-cont"> <!-- Div contains logo. -->
+							<a href="index.html"><img src="forumImages/logo2.png" alt="Site Logo" height="120" width="180" id="site-logo"></a> <!-- Hyperlinked logo -->
+						</div>
+						<div class="sitename"> <!-- Div contains name. -->
+							<h1>Project Hamster</h1>
+						</div>
+						<div class="menu-links fade-link"> <!-- Div containing menu button. -->
+							<ul>
+								<li><a href="index.html" id="home-button">Home</a></li>
+								<li><a href="about.html" id="about-button">About</a></li>
+								<li><a href="forum.html" id="forum-button">Forum</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="body"> <!-- Unique contents of each page go in here. -->
+				<div class="body-centre"> <!-- Majority of contents will go in here as it is centred -->
+					<div id=viewAnimeReview>
+						<h2> Title</h2>
+						<Br>
+						<p>content content content content content content content content content content content content content content content content content content content content content content content content content content content content content content content content content content content content content content content content content content</P>
+													
+						<a href="postReplyDiscussion.html" id ="reply-button"> Post Reply</a>
+						
+						
+						<form method="post" action="http://webdevfoundations.net/scripts/formdemo.asp">
+						<select name="reviewRating">
+						  <option value="0">Rate this post</option>
+						  <option value="1">1 star</option>
+						  <option value="2">2 star</option>
+						  <option value="3">3 star</option>
+						  <option value="5">4 star</option>
+						  <option value="5">5 star</option>	 
+						</select>
+						<input type="submit" value="Submit">
+						</form>
+					</div>	
+					
+					<div id="discussionReplyWrapper">
+						<div class="discussionReply">
+							<h4> example Reply #1</h4>
+							<p> reply reply reply reply reply reply reply</p>
+						</div>	
+						<div class="discussionReply">
+							<h4> example Reply #2</h4>
+							<p> reply reply reply reply reply reply reply</p>
+						</div>	
+						<div class="discussionReply">
+							<h4> example Reply #3</h4>
+							<p> reply reply reply reply reply reply reply</p>
+						</div>	
+					</div>
+				</div>
+					
+				</div>
+			</div>
+			<div class="footer"> <!-- Full width container for the footer -->
+				<div class="footer-centre"> <!-- Centered footer for other footer divs -->
+					<a href="index.html" id="home-small">Home</a>
+					<a href="about.html" id="about-small">About - Terms and Conditions - Privacy Policy</a>
+					<a href="forum.html" id="forum-small">Forum</a>
+					<a href="account.html" id="account-manage-small">Account Management</a>
+				</div>
+			</div>
+	</body>
+</html>

@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1"> <!-- changes width based on viewing device -->
+		<title>Discussion</title>
+		<link type="text/css" rel="stylesheet" href="style/base.css">
+		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Russo+One" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Hammersmith+One" rel="stylesheet">
+		
+		<script>
+		var active = document.querySelector(".page-load");
+		active.classList.remove("page-load");
+		</script>
+	</head>
+	<body>
+		<div class="page"> <!-- Wrapper class for entire page. -->
+			<div class="header"> <!-- Wrapper class for header that is full page width. -->
+				<div class="header-centre"> <!-- Div centres contents. -->
+					<div class="login"> <!-- Div containing login form. -->
+						<form class="login-form" method="post" action="http://webdevfoundations.net/scripts/formdemo.asp">
+							<input type="text" class="input" data-type="text" id="username" placeholder="username" name="username" required="required"   >
+							<input type="password" class="input" data-type="text" id="password" placeholder="password" name="password" required="required" >
+							<br>
+							<input value="Log In" class="input2" type="submit" id="login-button">
+							<input value="Register" class="input2" type="submit" id="register-button">
+							<input value="Forgot Password" class="input2" type="submit" id="forgot-button">
+						</form>
+					</div>
+					<div class="image-menu"> <!-- Div groups logo, name, and menu. -->
+						<div class="sitelogo-cont"> <!-- Div contains logo. -->
+							<a href="index.html"><img src="forumImages/logo2.png" alt="Site Logo" height="120" width="180" id="site-logo"></a> <!-- Hyperlinked logo -->
+						</div>
+						<div class="sitename"> <!-- Div contains name. -->
+							<h1>Project Hamster</h1>
+						</div>
+						<div class="menu-links fade-link"> <!-- Div containing menu button. -->
+							<ul>
+								<li><a href="index.html" id="home-button">Home</a></li>
+								<li><a href="about.html" id="about-button">About</a></li>
+								<li><a href="forum.html" id="forum-button">Forum</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="body"> <!-- Unique contents of each page go in here. -->
+				<div class="body-centre"> <!-- Majority of contents will go in here as it is centred -->
+					<h2 id="sectionTitle">Discussion</h2>
+					<p id="sectionComment">This is the place for fandom discussion.</p>
+					<select name="sort-discussion">
+						<option value="0">Sort by descending last reply date</option>
+						<option value="1">Sort by ascending last reply date</option>
+						<option value="2">Sort by descending post date</option>
+						<option value="3">Sort by ascending post date</option>
+						<option value="2">Sort by descending reply count</option>
+						<option value="3">Sort by ascending reply count</option>
+					</select>
+					<a href="discussionTemplate.html" id="postNew">Post Topic</a>
+					<a href="forum.html">Forum ></a>
+					<a href="discussion.html">Discussion ></a>
+						<table style="width:100%" id="forumTables">
+							<tr>
+								<th>Topic</th>
+								<th>Replies</th> 
+								<th>Last Post</th>
+							</tr>
+							<tr>
+								<td>
+									<a href="viewPostDiscussion.html">Topic number 1</a>
+									<a href="viewPostDiscussion.html">Original poster</a>
+									<a href="viewPostDiscussion.html">Date</a>
+								</td>
+								<td>
+									<a href="viewPostDiscussion.html">Number of replies</a>
+								</td> 
+								<td>
+									<a href="viewPostDiscussion.html">Sentence from last reply</a>
+									<a href="viewPostDiscussion.html">Reply Username</a>
+									<a href="viewPostDiscussion.html">Date</a>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="viewPostDiscussion.html">Topic number 2</a>
+									<a href="viewPostDiscussion.html">Original poster</a>
+									<a href="viewPostDiscussion.html">Date</a>
+								</td>
+								<td>
+									<a href="viewPostDiscussion.html">Number of replies</a>
+								</td> 
+								<td>
+									<a href="viewPostDiscussion.html">Sentence from last reply</a>
+									<a href="viewPostDiscussion.html">Reply Username</a>
+									<a href="viewPostDiscussion.html">Date</a>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="viewPostDiscussion.html">Topic number 3</a>
+									<a href="viewPostDiscussion.html">Original poster</a>
+									<a href="viewPostDiscussion.html">Date</a>
+								</td>
+								<td>
+									<a href="viewPostDiscussion.html">Number of replies</a>
+								</td> 
+								<td>
+									<a href="viewPostDiscussion.html">Sentence from last reply</a>
+									<a href="viewPostDiscussion.html">Reply Username</a>
+									<a href="viewPostDiscussion.html">Date</a>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="viewPostDiscussion.html">Topic number 4</a>
+									<a href="viewPostDiscussion.html">Original poster</a>
+									<a href="viewPostDiscussion.html">Date</a>
+								</td>
+								<td>
+									<a href="viewPostDiscussion.html">Number of replies</a>
+								</td> 
+								<td>
+									<a href="viewPostDiscussion.html">Sentence from last reply</a>
+									<a href="viewPostDiscussion.html">Reply Username</a>
+									<a href="viewPostDiscussion.html">Date</a>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="viewPostDiscussion.html">Topic number 5</a>
+									<a href="viewPostDiscussion.html">Original poster</a>
+									<a href="viewPostDiscussion.html">Date</a>
+								</td>
+								<td>
+									<a href="viewPostDiscussion.html">Number of replies</a>
+								</td> 
+								<td>
+									<a href="viewPostDiscussion.html">Sentence from last reply</a>
+									<a href="viewPostDiscussion.html">Reply Username</a>
+									<a href="viewPostDiscussion.html">Date</a>
+								</td>
+							</tr>
+						</table>
+						<a href="">prev</a>
+						<a href="">next</a>
+						<a href="">page 1 of 1</a>
+				</div>
+			</div>
+			<div class="footer"> <!-- Full width container for the footer -->
+				<div class="footer-centre"> <!-- Centered footer for other footer divs -->
+					<a href="index.html" id="home-small">Home</a>
+					<a href="about.html" id="about-small">About - Terms and Conditions - Privacy Policy</a>
+					<a href="forum.html" id="forum-small">Forum</a>
+					<a href="account.html" id="account-manage-small">Account Management</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
