@@ -760,3 +760,57 @@ table th{
 	color:black;
 	background-color: #f9ae9b;
 }
+/*---------------------------------------------- Viewpost discussion end------------------------------------*/
+/*----------------------------------------------------------Start of Favorites Page-------------------------**/
+
+.adminPortrait {
+    margin-left: 20px;
+    margin-top: 20px;
+    float: left;
+    width: 300px;
+}
+
+.adminFavorites {
+    margin-top: 20px;
+    width: 600px;
+    float: left;
+    position: relative;
+}
+
+.adminBox {
+    width: 100%;
+    height: auto;
+    display: inline-block;
+    background-color: antiquewhite;
+    border: 1px solid orange;
+}
+
+.adminName {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 30px;
+    text-shadow: 2px 2px grey;
+    font-family: 20px;
+    font-weight: bold;
+}
+
+.favoriteItem {
+    margin-top: 0;
+}
+
+/* Hides the div for the favorites information. */
+.popUp {
+    height: 20px;
+    overflow: hidden;
+    transition: height 2s;
+}
+
+.popUp:hover {
+    height: 350px;
+}
+
+.adminName {
+    text-indent: 20px;
+}
+
+/*-------------------------------------End of Favorites Page-----------------------*/
