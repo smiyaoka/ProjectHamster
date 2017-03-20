@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1"> <!-- changes width based on viewing device -->
-		<title>Account Management</title>
+		<title>Account Registration</title>
 		<link type="text/css" rel="stylesheet" href="style/base.css">
 		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Russo+One" rel="stylesheet">
@@ -188,13 +188,81 @@
 			}
 		}
 		
+		function testPasswordMatch(passwordId, passwordId2) {
+			return $(passwordId).value == $(passwordId2).value || ($(passwordId).value == null && $(passwordId2).value == null);
+		}
+		
+		function validatePasswordMatch(passwordId, passwordId2, passwordErrorId2) {
+			if (!testPasswordMatch(passwordId, passwordId2)) {
+				event.preventDefault();
+				$(passwordErrorId2).innerHTML = "The passwords do not match.";
+				return false; 
+			}
+			$(passwordErrorId2).innerHTML = "";
+			return true; 
+		}
+		
+		function testUsernameValid(id) {
+			if ($(id).value == null) {
+				return false; 
+			}			
+			return $(id).value != "";			
+		}
+		
+		function validateUsername(usernameId, errorId) {
+			if (!testUsernameValid(usernameId)) {
+				$(errorId).innerHTML = "Enter a username.";
+				return false; 
+			}
+			$(errorId).innerHTML = "";
+			return true; 
+		}
+		
+		function validateRegistrationSubmit(emailId, emailErrorId, usernameId, usernameErrorId, passwordId, passwordErrorId, passwordId2, passwordErrorId2, avatarId, avatarErrorId) {
+			var valid = true; 
+			
+			if(!validateEmail(emailId, emailErrorId)) {
+				event.preventDefault();
+				valid = false; 
+			}
+			
+			if (!validateUsername(usernameId, usernameErrorId)) {
+				event.preventDefault();
+				valid = false; 
+			}
+			
+			if (!testPasswordValidChar(passwordId) || !testPasswordLength(passwordId)) {
+				event.preventDefault();
+				$(passwordErrorId).innerHTML = !testPasswordValidChar(passwordId)
+					? "Only a-z, A-Z, 0-9, or !@#$%^&* allowed."
+						: "The password must have at least 8 characters.";								
+				valid = false; 
+			} else {
+				$(passwordErrorId).innerHTML = "";
+			}
+						
+			if (!validatePasswordMatch(passwordId, passwordId2, passwordErrorId2)) {
+				event.preventDefault();
+				valid = false; 
+			}
+			
+			
+			if(!testAvatarInputEmpty(avatarId) && !testAvatarValid(avatarId)) {
+				event.preventDefault();
+				$(avatarErrorId).innerHTML = 
+					testAvatarInputEmpty(avatarId) ? 
+						"" : "The file needs to be a png, jpg/jpeg, or gif image.";				
+				valid = false; 
+			}
+			return valid;
+		}
+		
 		</script>
 	</head>
 	<body class="page-load" onload="onLoad()">
 		<div class="page"> <!-- Wrapper class for entire page. -->
 			<div class="header"> <!-- Wrapper class for header that is full page width. -->
 				<div class="header-centre"> <!-- Div centres contents. -->
-					
 					<div class="image-menu"> <!-- Div groups logo, name, and menu. -->
 						<div class="sitelogo-cont"> <!-- Div contains logo. -->
 							<a href="index.html"><img src="forumImages/logo2.png" alt="Site Logo" height="120" width="180" id="site-logo"></a> <!-- Hyperlinked logo -->
@@ -214,94 +282,45 @@
 			</div>
 			<div class="body"> <!-- Unique contents of each page go in here. -->
 				<div class="body-centre"> <!-- Majority of contents will go in here as it is centred -->
-										
-					<h2>Account Info</h2>					
-					<!-- The user's account info. -->
-					<div id="account_info"> 						
-						<!-- The user's avatar image. -->
-						<div id="avatar"> 
-							<img src="forumImages/placeholder_avatar.jpg" alt="Username's Avatar">
-						</div>
-						
-						<!-- The user's username and password. -->
-						<p>Username: <br>
-						username</p>		
-						<p>Email: <br>
-						user@email.com</p>						
-					</div>
+				<div id="registration-div">						
+					<h2>Make an Account</h2>					
 					
-					<!-- Where the user changes the avatar image. -->
-					<div id="change_avatar">
-						<h3>Change Avatar Image</h3> 
-						<form method="post" action="http://webdevfoundations.net/scripts/formdemo.asp" onsubmit="return validateAvatarSubmit('new_image', 'error_avatar');">		
-							<label for="new_image">New Image: </label><br>
-							<input type="file" id="new_image" name="newAvatarImage" onchange="return validateAvatar('new_image', 'error_avatar');">
+						<form method="post" action="http://webdevfoundations.net/scripts/formdemo.asp" onsubmit="return validateRegistrationSubmit('register_email', 'registration-error-email', 'register_username', 'registration-error-username', 'register_password', 'registration-error-password', 'register_password2', 'registration-error-password2', 'register_avatar', 'registration-error-avatar');">		
+							
+							<label for="register_email">Email: </label><br>
+								<input type="text" id="register_email" name="registerEmail" value="" onchange="validateEmail('register_email', 'registration-error-email')">
+								<span id="registration-error-email" class="registration-error"></span>
+								<br>
+							<label for="register_username">Username: </label><br>
+								<input type="text" id="register_username" name="registerUsername" value="">
+								<span id="registration-error-username" class="registration-error"></span>
+								<br>
+							<label for="register_password">Password: </label><br>
+								<input type="password" id="register_password" name="registerPassword" value="" onkeyup="updatePasswordStrength('register_password', 'password_strength_bar', 'password-strength-text')">
+								<span id="registration-error-password" class="registration-error"></span>
+								
+								<div id="password_strength">
+									<h5 id="password-strength-text">Password Strength: </h5>
+									<progress id="password_strength_bar" value ="0" max="4"></progress>
+								</div>
+								
+								<label for="register_password2">Retype Password: </label><br>
+								<input type="password" id="register_password2" name="registerPassword2" value="" onchange="validatePasswordMatch('register_password', 'register_password2', 'registration-error-password2')">
+								<span id="registration-error-password2" class="registration-error"></span>
+							<br>
+							<label for="register_avatar">Upload an Avatar (optional): </label><br>
+							<input type="file" id="register_avatar" name="registerAvatar" onchange="validateAvatar('register_avatar', 'registration-error-avatar')">
+							<span id="registration-error-avatar" class="registration-error"></span>
+							
+							<br>
 							<br>
 							<input type="submit" value="Submit">		
 						</form>
 						<div id="error_avatar">								
 							<br>
 						</div>
-					</div>
 					
-					<!-- Where the user can make changes to their account. -->
-					<div id="second_row"> 
-						
-						<!-- Where the user changes the email. -->	
-						<div id="change_email">
-							<h3>Change Email</h3> 	
-							<form method="post" action="http://webdevfoundations.net/scripts/formdemo.asp" onsubmit="return validateEmailSubmit('new_email', 'current_password_for_email', 'error_email');">
-								<label for="new_email">New Email: </label><br>
-								<input type="text" id="new_email" name="newEmail" value="" onchange="return validateEmail('new_email', 'error_email');">
-								<br>
-								
-								<label for="current_password_for_email">Current Password: </label><br>
-								<input type="password" id="current_password_for_email" name="passwordEmailChange" value=""><br>
-								
-								<input type="submit" value="Submit">
-							</form>
-							<div id="error_email">
-								<br>
-							</div>
-						</div>
-						
-						<!-- Where the user changes the password. -->	
-						<div id="change_password">
-							<h3>Change Password</h3> 	
-							<form method="post" action="http://webdevfoundations.net/scripts/formdemo.asp" onsubmit="return validatePasswordSubmit('new_password', 'current_password_for_password', 'error_password');">
-								<label for="new_password">New Password: </label><br>
-								<input type="password" id="new_password" name="newPassword" value="" onkeyup="updatePasswordStrength('new_password', 'password_strength_bar', 'password_strength_text')"><br>
-								
-								<div id="password_strength">
-									<h5 id="password_strength_text">Password Strength: </h5>
-									<progress id="password_strength_bar" value ="0" max="4"></progress>
-								</div>
-								
-								<label for="current_password_for_password">Current Password: </label><br>
-								<input type="password" id="current_password_for_password" name="passwordPasswordChange" value=""><br>
-								
-								<input type="submit" value="Submit">
-							</form>
-							<div id="error_password">
-								<br><br>
-							</div>
-						</div>
-						
-						<!-- Where the user deletes the account. -->
-						<div id="delete_account">
-							<h3>Delete Account</h3> 
-							<form method="post" action="http://webdevfoundations.net/scripts/formdemo.asp" onsubmit="return validateDeleteSubmit('deletion_password', 'error_deletion');">
-								<label for="deletion_password">Current Password: </label><br>
-								<input type="password" id="deletion_password" name="passwordAccountDeletion" value=""><br>
-								<input type="submit" value="Warning! This cannot be undone!">		
-							</form>							
-							<div id="error_deletion">
-								<br>
-							</div>
-						</div>
-						
-					</div>
-					
+				</div>
 				</div>
 			</div>
 			<div class="footer"> <!-- Full width container for the footer -->
