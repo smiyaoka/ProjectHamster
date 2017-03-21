@@ -467,7 +467,7 @@ textarea:focus {
 #animeReviewRules{
 			
 	position: fixed;
-	left: 850px;
+	left: 70em;
 	top: 160px;
 	width:180px;
 	height:300px;
@@ -486,7 +486,7 @@ textarea:focus {
 /*style for forum rule box*/
 #animeReviewRulesDiscussion{
 	position: fixed;
-	left: 850px;
+	left: 70em;
 	top: 160px;
 	width:180px;
 	height:300px;
