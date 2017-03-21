@@ -799,4 +799,88 @@ table th{
 }
 
 /*-------------------------------------End of Favorites Page-----------------------*/
+/**--------Hamster rating system start--------------**/
+
+.rating {
+    float:left;
+	height: 50px;
+}
+
+/* :not(:checked) is a filter, so that browsers that don’t support :checked don’t 
+   follow these rules. Every browser that supports :checked also supports :not(), so
+   it doesn’t make the test unnecessarily selective */
+.rating:not(:checked) > input {
+    position:absolute;
+    top:-9999px;
+    clip:rect(0,0,0,0);
+}
+
+.rating:not(:checked) > label {
+    float:right;
+    width:1em;
+    padding:0 .1em;
+    overflow:hidden;
+    white-space:nowrap;
+    cursor:pointer;
+    font-size:200%;
+    line-height:1.2;
+}
+
+.rating:not(:checked) > label:before {
+    content: url("hamster.PNG");
+}
+
+.rating > input:checked ~ label {
+    content: url("ham.gif");
+}
+
+.rating:not(:checked) > label:hover,
+.rating:not(:checked) > label:hover ~ label {
+    content: url("ham.gif");
+}
+
+.rating > input:checked + label:hover,
+.rating > input:checked + label:hover ~ label,
+.rating > input:checked ~ label:hover,
+.rating > input:checked ~ label:hover ~ label,
+.rating > label:hover ~ input:checked ~ label {
+    content: url("ham.gif");
+}
+
+.rating > label:active {
+    position:relative;
+    top:2px;
+    left:2px;
+}
+
+/* end of Lea's code */
+
+/*
+ * Clearfix from html5 boilerplate
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/*
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* my stuff */
+#status, button {
+    margin: 20px 0;
+}
+/**--------Hamster rating system end--------------**/
 >>>>>>> origin/master
