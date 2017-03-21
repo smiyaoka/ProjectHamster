@@ -89,7 +89,7 @@
 			if (email == null) {
 				return false; 
 			}
-			return /\S+@\S+\.\S+/.test(email) && email.match(/\@/g).length == 1;
+			return /^\S+@\S+\.\S+$/.test(email) && email.match(/\@/g).length == 1;
 		}
 		
 		function validateEmail(inputId, errorId) {
