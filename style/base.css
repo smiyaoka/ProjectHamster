@@ -259,124 +259,94 @@ h1, h2, h3, h4, h5, h6 {
 }
  
 /* --------------------------------------------- schedule bar  end------------------------------------*/
-/*----------------------------review bar--------------------------------*/
- 
-/* wrapper class for review bar*/
-#wrapperReviews{
-    background-color: black;
-    width: 100%;
- 
+
+
+/*-------------------------------------------------- slide---------------------------*/
+
+.promotion{
+	/*slideshow*/
+	float:left;
 }
- 
-/*styling for all the a tag in review bar*/
-#wrapperReviews li a{
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
+
+.promotion h2{
+	text-align:center;
 }
- 
-/* align the review bar to left side of the body*/
-.reviewTab li{
-    float:left;
+
+.mySlides{
+	/*border of slideshow*/
+	border-radius:5px;
 }
- 
-/*styling for review bar menu*/
-#wrapperReviews ul{
-    list-style-type: none;
-    margin: 0;
+
+.left{
+	/* slideshow  previous button*/
+	float:left;
+	border-style:solid;
+	border-width:2px;
+	border-radius: 5px;
+	padding:5px;
+	margin:2px;
+}
+.right{
+	/*slideshow next button*/
+	float:right;
+	border-style:solid;
+	border-width:2px;
+	border-radius: 5px;
+	padding:5px;
+	margin:2px;
+}
+.text:hover{
+	/*hover effect of both previous and next button on slide show*/
+	color:red; 
+	cursor:pointer;
+}
+
+/*--------------------------- featured first impression begin----------------------*/
+
+#firstImpression2boxs{
+	/*featured first impression on the right of slide show*/
+	margin-left:500px;
+}
+#firstImpression2boxs ul{
+	/*removing extra space */
+	list-style:none;
+	margin:0;
     padding: 0;
-    overflow: hidden;
-    background-color: #333;
 }
- 
-/*hover effect for review bar*/
-#wrapperReviews a:hover{
-     
-    background-color: red;
+
+#firstImpression2boxs h2{
+	text-align:center;
 }
- 
-/*centering boxes*/
-#featuredAnimeReview{
-    width:90%;
-    margin:auto;
+
+/*--------------------------- strawpoll begin----------------------*/
+#strawpoll{
+	/* embed strawpoll*/
+	margin-top:65px;
+
 }
- 
-/*independent styling for featured anime review*/
-#animeReview1{
-    background-image: url('../forumImages/neko.jpg');
-    background-repeat:no-repeat;
-    margin-left:100px;
-    width:700px;
-    height:250px;
-    border-style:solid;
-    border-color:red;
-    border-width:3px;
+
+#strawpoll{
+	text-align:center;
 }
- 
-/*styling for all the text inside of the animeReview1*/
-#subAnimeReview1{
-    margin-left:180px;
-    margin-top:50px;
+
+
+/*--------------------------- featured review begin----------------------*/
+#review3boxes{
+	/*featured review under slide show*/
+	width:600px;
+	float:left;
+	margin-top:30px;
 }
- 
-/*independent styling for featured anime review*/
-#animeReview2{
-    background-image: url('../forumImages/neko.jpg');
-    background-repeat:no-repeat;
-    margin-top:20px;
-    margin-left:100px;
-    width:700px;
-    height:250px;
-    border-style:solid;
-    border-color:red;
-    border-width:3px;
+
+#review3boxes ul{
+	/*removing extra space*/
+	list-style:none;
+	margin:0;
+    padding: 0;
 }
- 
-/*styling for all the text inside of the animeReview2*/
-#subAnimeReview2{
-    margin-left:180px;
-    margin-top:50px;
-}
- 
-/*independent styling for featured anime review*/
-#animeReview3{
-    background-image: url('../forumImages/neko.jpg');
-    background-repeat:no-repeat;
-    margin-top:20px;
-    margin-left:100px;
-    width:700px;
-    height:250px;
-    border-style:solid;
-    border-color:red;
-    border-width:3px;
-}
- 
-/*styling for all the text inside of the animeReview3*/
-#subAnimeReview3{
-    margin-left:180px;
-    margin-top:50px;
-}
- 
-/*independent styling for featured anime review*/
-#animeReview4{
-    background-image: url('../forumImages/neko.jpg');
-    background-repeat:no-repeat;
-    margin-top:20px;
-    margin-bottom:20px;
-    margin-left:100px;
-    width:700px;
-    height:250px;
-    border-style:solid;
-    border-color:red;
-    border-width:3px;
-}
- 
-/*styling for all the text inside of the animeReview4*/
-#subAnimeReview4{
-    margin-left:180px;
-    margin-top:50px;
+
+#review3boxes{
+	text-align:center;
 }
 /*-----------------------------first impression tab start -----------------------------*/
 
@@ -384,139 +354,45 @@ h1, h2, h3, h4, h5, h6 {
 #firstImpression1{
 	background-image: url('../forumImages/urara.jpg');
 	background-repeat:no-repeat;
-	margin-left:100px;
-	width:700px;
-	height:250px;
+	width:500px;
+	height:170px;
 	border-style:solid;
+	border-radius:25px;
 	border-color:red;
 	border-width:3px;
+	margin:15px;
+	padding:5px;
+	font-size: 14px;
 }
 
 /*styling for all the text inside of the firstImpression1*/
 #subFirstImpression1{
 	margin-left:180px;
-	margin-top:50px;
+
 }
 
 /*independent styling for featured first impression */
 #firstImpression2{
 	background-image: url('../forumImages/urara.jpg');
 	background-repeat:no-repeat;
-	margin-top:20px;
-	margin-left:100px;
-	width:700px;
-	height:250px;
+	width:500px;
+	height:170px;
 	border-style:solid;
+	border-radius:25px;
 	border-color:red;
 	border-width:3px;
+	margin:15px;
+	padding:5px;
+	font-size: 14px;
 }
 
 /*styling for all the text inside of the firstImpression1*/
 #subFirstImpression2{
 	margin-left:180px;
-	margin-top:50px;
 }
 
-/*independent styling for featured first impression */
-#firstImpression3{
-	background-image: url('../forumImages/urara.jpg');
-	background-repeat:no-repeat;
-	margin-top:20px;
-	margin-left:100px;
-	width:700px;
-	height:250px;
-	border-style:solid;
-	border-color:red;
-	border-width:3px;
-}
 
-/*styling for all the text inside of the firstImpression1*/
-#subFirstImpression3{
-	margin-left:180px;
-	margin-top:50px;
-}
 
-/*independent styling for featured first impression */
-#firstImpression4{
-	background-image: url('../forumImages/urara.jpg');
-	background-repeat:no-repeat;
-	margin-top:20px;
-	margin-bottom:20px;
-	margin-left:100px;
-	width:700px;
-	height:250px;
-	border-style:solid;
-	border-color:red;
-	border-width:3px;
-}
-
-/*styling for all the text inside of the firstImpression1*/
-#subFirstImpression4{
-	margin-left:180px;
-	margin-top:50px;
-}
-
-/*-----------------------------featured discussion tab start -----------------------------*/
-
-/*style for a tags inside post1*/
-#post1 a{
-	text-decoration:none;
-}
-
-/* style for featured post1 on front page*/
-#post1{
-	border-top:double;
-	border-bottom:double;
-	border-width:5px;
-	border-color:#F6851F;
-	margin-bottom:5px;
-}
-
-/*style for a tags inside post2*/
-#post2 a{
-	text-decoration:none;
-}
-
-/* style for featured post2 on front page*/
-#post2{
-	border-bottom:double;
-	border-width:5px;
-	border-color:#F6851F;
-	margin-bottom:5px;
-}
-
-/*style for a tags inside post3*/
-#post3 a{
-	text-decoration:none;
-}
-
-/* style for featured post3 on front page*/
-#post3{
-	border-bottom:double;
-	border-width:5px;
-	border-color:#F6851F;
-	margin-bottom:5px;
-}
-/*-----------------------------featured poll tab start -----------------------------*/
-
-/*style for featured poll 1 on front page*/
-#featuredPoll1{
-	border-style: groove;
-	border-color: #F6851F;
-	border-width: 5px;
-	margin:10px;
-	padding:5px;
-}
-
-/*style for featured poll2 on front page*/
-#featuredPoll2{
-	border-style: groove;
-	border-color: #F6851F;
-	border-width: 5px;
-	margin:10px;
-	padding:5px;
-}
-/*------------------------------review bar end---------------------------*/
 
 
 /*---------------------------------------------- Anime Review Template Start -----------------------------*/
