@@ -145,6 +145,7 @@ a:hover {
 	height: 40px;
 	display: block;
 	font-size: 0.8em;
+	float:left;
 }
 
 /* Footer navigation links formatted to be more discrete. */
