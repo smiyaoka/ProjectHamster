@@ -827,16 +827,16 @@ table th{
 }
 
 .rating:not(:checked) > label:before {
-    content: url("forumImages/hamster.PNG");
+    content: url("../forumImages/hamster.PNG");
 }
 
 .rating > input:checked ~ label {
-    content: url("forumImages/ham.gif");
+    content: url("../forumImages/ham.gif");
 }
 
 .rating:not(:checked) > label:hover,
 .rating:not(:checked) > label:hover ~ label {
-    content: url("ham.gif");
+    content: url("../forumImages/ham.gif");
 }
 
 .rating > input:checked + label:hover,
@@ -844,7 +844,7 @@ table th{
 .rating > input:checked ~ label:hover,
 .rating > input:checked ~ label:hover ~ label,
 .rating > label:hover ~ input:checked ~ label {
-    content: url("forumImages/ham.gif");
+    content: url("../forumImages/ham.gif");
 }
 
 .rating > label:active {
