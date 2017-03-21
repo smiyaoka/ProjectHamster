@@ -311,17 +311,15 @@ h1, h2, h3, h4, h5, h6 {
 #firstImpression2boxs{
 	/*featured first impression on the right of slide show*/
 	margin-left:500px;
+	text-align:center;
 }
 #firstImpression2boxs ul{
 	/*removing extra space */
 	list-style:none;
 	margin:0;
-    padding: 0;
+   	padding: 0;
 }
 
-#firstImpression2boxs h2{
-	text-align:center;
-}
 
 /*--------------------------- strawpoll begin----------------------*/
 #strawpoll{
