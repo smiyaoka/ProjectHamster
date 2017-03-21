@@ -188,7 +188,11 @@ h1, h2, h3, h4, h5, h6 {
     background-color: black;
     width: 100%;
 }
- 
+
+#homeSchedule h2{
+	text-align:center;
+}
+
 /*styling for all the a tag in wrapper*/
 #wrapper li a{
     display: block;
