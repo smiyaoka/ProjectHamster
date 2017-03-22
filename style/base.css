@@ -159,11 +159,18 @@ a:hover {
 }
 /* Set position of login form. */
 .login {
-	width: 160px;
-	height: 90px;
 	float: right;
 	display: inline;
-	padding: 10px;
+	padding: 5px;
+    width: 50px;
+    margin-top: -0.3%;
+    margin-right: 10%;
+    background-color: coral;
+}
+
+#loginBT {
+    margin-left: 4.5px;
+    color: #FFFFFF;
 }
 
 /* Setting body container position. */
