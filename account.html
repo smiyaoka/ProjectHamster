@@ -217,9 +217,9 @@
 										
 					<h2>Account Info</h2>					
 					<!-- The user's account info. -->
-					<div id="account_info"> 						
+					<div id="manage-account-info"> 						
 						<!-- The user's avatar image. -->
-						<div id="avatar"> 
+						<div id="manage-avatar-div"> 
 							<img src="forumImages/placeholder_avatar.jpg" alt="Username's Avatar">
 						</div>
 						
@@ -231,7 +231,7 @@
 					</div>
 					
 					<!-- Where the user changes the avatar image. -->
-					<div id="change_avatar">
+					<div id="manage-change-avatar">
 						<h3>Change Avatar Image</h3> 
 						<form method="post" action="http://webdevfoundations.net/scripts/formdemo.asp" onsubmit="return validateAvatarSubmit('manage_new_image', 'error_avatar');">		
 							<label for="manage_new_image">New Image: </label><br>
@@ -245,10 +245,10 @@
 					</div>
 					
 					<!-- Where the user can make changes to their account. -->
-					<div id="second_row"> 
+					<div id="manage-second-row"> 
 						
 						<!-- Where the user changes the email. -->	
-						<div id="change_email">
+						<div id="manage-change-email">
 							<h3>Change Email</h3> 	
 							<form method="post" action="http://webdevfoundations.net/scripts/formdemo.asp" onsubmit="return validateEmailSubmit('manage_new_email', 'manage_password_for_email', 'error_email');">
 								<label for="manage_new_email">New Email: </label><br>
@@ -266,7 +266,7 @@
 						</div>
 						
 						<!-- Where the user changes the password. -->	
-						<div id="change_password">
+						<div id="manage-change-password">
 							<h3>Change Password</h3> 	
 							<form method="post" action="http://webdevfoundations.net/scripts/formdemo.asp" onsubmit="return validatePasswordSubmit('manage_new_password', 'manage_password_for_password', 'error_password');">
 								<label for="manage_new_password">New Password: </label><br>
@@ -288,7 +288,7 @@
 						</div>
 						
 						<!-- Where the user deletes the account. -->
-						<div id="delete_account">
+						<div id="manage-delete-account">
 							<h3>Delete Account</h3> 
 							<form method="post" action="http://webdevfoundations.net/scripts/formdemo.asp" onsubmit="return validateDeleteSubmit('manage_deletion_password', 'error_deletion');">
 								<label for="manage_deletion_password">Current Password: </label><br>

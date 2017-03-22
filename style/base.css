@@ -657,19 +657,19 @@ table th{
 /*------------ACCOUNT MANAGEMENT CSS------------*/
 
 /* The account info section of the account management page. */
-#account_info {
+#manage-account-info {
 	overflow: hidden; 
 	margin-bottom: 40px; 
 	display: inline-block;
 	width: 480px;
 }
 
-#account_info p {
+#manage-account-info p {
 	margin-top: 0px;
 }
 
 /* The div that contains the avatar image. */
-#avatar {
+#manage-avatar-div {
 	float: left; 
 	height: 128px;
 	width: 128px; 
@@ -677,48 +677,48 @@ table th{
 }
 
 /* The avatar image. */
-#avatar img {
+#manage-avatar-div img {
 	height: 100%;
 	width: auto;
 }
 
-#second_row {
+#manage-second-row {
 	overflow: hidden; 
 }
 
-#change_avatar {
+#manage-change-avatar {
 	float: right; 
 	display: inline-block;
 	overflow: hidden;
 	width: 334px;
 }
 
-#change_avatar h3 {
+#manage-change-avatar h3 {
 	margin-bottom: 8px;
 }
 
-#change_avatar form input {
+#manage-change-avatar form input {
 	margin-bottom: 7px;
 }
 
-#second_row div{
+#manage-second-row div{
 	width: 333px; 
 	float: left; 
 	margin-bottom: 10px; 
 }
 
-#second_row #delete_account {
+#manage-second-row #manage-delete-account {
 	width: 334px;
 	float: right; 
 }
 
 /* The headings where the user changes account information. */
-#second_row h3 {
+#manage-second-row h3 {
 	margin-bottom: 8px;
 }
 
 /* The inputs in the forms where the user changes account information. */
-#second_row input {
+#manage-second-row input {
 	margin-bottom: 8px; 
 }
 
