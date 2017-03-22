@@ -6,6 +6,53 @@ body {
 	margin: 0px;
 }
 
+/*-----------------------------------------------*/
+#blackButton{
+    background-color: transparent;
+    border: none;
+}
+
+/* Login */
+.boxBG{
+    background-image: url(forumImages/loginBG.png);
+    height:200px;
+    width:300px;
+    position:absolute;
+    left: 15%;
+    top: -1%;
+    display: none;
+}
+
+.box{
+    background-image: url(forumImages/loginBG.png);
+    height:250px;
+    width:300px;
+    position:absolute;
+    left: 40%;
+    top: 40%;
+    display: none;
+}
+
+#username{
+    margin-bottom: 10%;
+}
+
+#password{
+    margin-bottom: 5%;
+    
+}
+
+.login-form{
+    margin-left: 3%;
+    margin-top: -10%;
+    position: absolute;
+}
+
+.close{
+    float:right;
+    margin-top: -7%;
+    margin-right: -8%;
+}
 /* No transitions. */ 
 .page-load{
 	-webkit-transition: none !important; 
