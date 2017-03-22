@@ -615,6 +615,18 @@ textarea:focus {
 		#viewAnimeReview input[type=submit]:hover {
 			background-color: #F28888;/*light pink*/
 		}
+
+#postNew{
+	border-radius:5px;
+	border-width:2px;
+	border-color::#F6851F;
+	background-color:#F6851F;
+	padding:1px;
+}
+
+#postNew:hover{
+	background-color: #f9ae9b;
+}
 		/*---------------------------------------------- Viewpost discussion end------------------------------------*/
 /*---------------------------------------------- About start------------------------------------*/
 
