@@ -206,12 +206,12 @@
 			if ($(id).value == null) {
 				return false; 
 			}			
-			return $(id).value != "";			
+			return $(id).value != "" && !/[^a-zA-Z0-9]/.test($(id).value);;			
 		}
 		
 		function validateUsername(usernameId, errorId) {
 			if (!testUsernameValid(usernameId)) {
-				$(errorId).innerHTML = "Enter a username.";
+				$(errorId).innerHTML = "Your username must only have numbers or letters.";
 				return false; 
 			}
 			$(errorId).innerHTML = "";
@@ -292,7 +292,7 @@
 								<span id="registration-error-email" class="registration-error"></span>
 								<br>
 							<label for="register_username">Username: </label><br>
-								<input type="text" id="register_username" name="registerUsername" value="">
+								<input type="text" id="register_username" name="registerUsername" value="" onchange="validateUsername('register_username', 'registration-error-username')">
 								<span id="registration-error-username" class="registration-error"></span>
 								<br>
 							<label for="register_password">Password: </label><br>

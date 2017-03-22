@@ -233,9 +233,9 @@
 					<!-- Where the user changes the avatar image. -->
 					<div id="change_avatar">
 						<h3>Change Avatar Image</h3> 
-						<form method="post" action="http://webdevfoundations.net/scripts/formdemo.asp" onsubmit="return validateAvatarSubmit('new_image', 'error_avatar');">		
-							<label for="new_image">New Image: </label><br>
-							<input type="file" id="new_image" name="newAvatarImage" onchange="return validateAvatar('new_image', 'error_avatar');">
+						<form method="post" action="http://webdevfoundations.net/scripts/formdemo.asp" onsubmit="return validateAvatarSubmit('manage_new_image', 'error_avatar');">		
+							<label for="manage_new_image">New Image: </label><br>
+							<input type="file" id="manage_new_image" name="newAvatarImage" onchange="return validateAvatar('manage_new_image', 'error_avatar');">
 							<br>
 							<input type="submit" value="Submit">		
 						</form>
@@ -250,13 +250,13 @@
 						<!-- Where the user changes the email. -->	
 						<div id="change_email">
 							<h3>Change Email</h3> 	
-							<form method="post" action="http://webdevfoundations.net/scripts/formdemo.asp" onsubmit="return validateEmailSubmit('new_email', 'current_password_for_email', 'error_email');">
-								<label for="new_email">New Email: </label><br>
-								<input type="text" id="new_email" name="newEmail" value="" onchange="return validateEmail('new_email', 'error_email');">
+							<form method="post" action="http://webdevfoundations.net/scripts/formdemo.asp" onsubmit="return validateEmailSubmit('manage_new_email', 'manage_password_for_email', 'error_email');">
+								<label for="manage_new_email">New Email: </label><br>
+								<input type="text" id="manage_new_email" name="newEmail" value="" onchange="return validateEmail('manage_new_email', 'error_email');">
 								<br>
 								
-								<label for="current_password_for_email">Current Password: </label><br>
-								<input type="password" id="current_password_for_email" name="passwordEmailChange" value=""><br>
+								<label for="manage_password_for_email">Current Password: </label><br>
+								<input type="password" id="manage_password_for_email" name="passwordEmailChange" value=""><br>
 								
 								<input type="submit" value="Submit">
 							</form>
@@ -268,17 +268,17 @@
 						<!-- Where the user changes the password. -->	
 						<div id="change_password">
 							<h3>Change Password</h3> 	
-							<form method="post" action="http://webdevfoundations.net/scripts/formdemo.asp" onsubmit="return validatePasswordSubmit('new_password', 'current_password_for_password', 'error_password');">
-								<label for="new_password">New Password: </label><br>
-								<input type="password" id="new_password" name="newPassword" value="" onkeyup="updatePasswordStrength('new_password', 'password_strength_bar', 'password_strength_text')"><br>
+							<form method="post" action="http://webdevfoundations.net/scripts/formdemo.asp" onsubmit="return validatePasswordSubmit('manage_new_password', 'manage_password_for_password', 'error_password');">
+								<label for="manage_new_password">New Password: </label><br>
+								<input type="password" id="manage_new_password" name="newPassword" value="" onkeyup="updatePasswordStrength('manage_new_password', 'password_strength_bar', 'password_strength_text')"><br>
 								
 								<div id="password_strength">
 									<h5 id="password_strength_text">Password Strength: </h5>
 									<progress id="password_strength_bar" value ="0" max="4"></progress>
 								</div>
 								
-								<label for="current_password_for_password">Current Password: </label><br>
-								<input type="password" id="current_password_for_password" name="passwordPasswordChange" value=""><br>
+								<label for="manage_password_for_password">Current Password: </label><br>
+								<input type="password" id="manage_password_for_password" name="passwordPasswordChange" value=""><br>
 								
 								<input type="submit" value="Submit">
 							</form>
@@ -290,9 +290,9 @@
 						<!-- Where the user deletes the account. -->
 						<div id="delete_account">
 							<h3>Delete Account</h3> 
-							<form method="post" action="http://webdevfoundations.net/scripts/formdemo.asp" onsubmit="return validateDeleteSubmit('deletion_password', 'error_deletion');">
-								<label for="deletion_password">Current Password: </label><br>
-								<input type="password" id="deletion_password" name="passwordAccountDeletion" value=""><br>
+							<form method="post" action="http://webdevfoundations.net/scripts/formdemo.asp" onsubmit="return validateDeleteSubmit('manage_deletion_password', 'error_deletion');">
+								<label for="manage_deletion_password">Current Password: </label><br>
+								<input type="password" id="manage_deletion_password" name="passwordAccountDeletion" value=""><br>
 								<input type="submit" value="Warning! This cannot be undone!">		
 							</form>							
 							<div id="error_deletion">
