@@ -12,10 +12,14 @@ function colorChangeBlack(){
     document.getElementById("Thursday").style.color="white";
     document.getElementById("Friday").style.color="white";
     document.getElementById("Saturday").style.color="white";
-    document.getElementById("body-centre").style.color="white"
-    document.p.style.color="white"
-    document.h2.style.color="white"
-    document.getElementById("animeReview4").style.color="white"
+    document.getElementById("intro").style.color="white"
+    document.getElementById("introText").style.color="white"
+    document.getElementById("CSAS").style.color="white"
+    document.getElementById("AP").style.color="white"
+    document.getElementById("FFIS").style.color="white"
+    document.getElementById("subFirstImpression1").style.color="white"
+    document.getElementById("AP").style.color="white"
+    document.getElementById("AP").style.color="white"
 }
 function colorChangeBlue(){
     document.body.style.backgroundColor="#58D3F7";
