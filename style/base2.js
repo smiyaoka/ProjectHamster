@@ -12,7 +12,7 @@ function colorChangeBlack(){
     document.getElementById("Thursday").style.color="white";
     document.getElementById("Friday").style.color="white";
     document.getElementById("Saturday").style.color="white";
-    document.a.style.color="white"
+    document.getElementById("body-centre").style.color="white"
     document.p.style.color="white"
     document.h2.style.color="white"
     document.getElementById("animeReview4").style.color="white"
