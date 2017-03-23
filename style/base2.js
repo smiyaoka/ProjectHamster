@@ -18,8 +18,11 @@ function colorChangeBlack(){
     document.getElementById("AP").style.color="white"
     document.getElementById("FFIS").style.color="white"
     document.getElementById("subFirstImpression1").style.color="white"
-    document.getElementById("AP").style.color="white"
-    document.getElementById("AP").style.color="white"
+    document.getElementById("subFirstImpression2").style.color="white"
+    document.getElementById("FARS").style.color="white"
+    document.getElementById("subFirstImpression1").style.color="white"
+    document.getElementById("subFirstImpression2").style.color="white"
+    document.getElementById("FP").style.color="white"
 }
 function colorChangeBlue(){
     document.body.style.backgroundColor="#58D3F7";
