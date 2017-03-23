@@ -20,6 +20,7 @@ body {
     position:absolute;
     left: 15%;
     top: -1%;
+    display: none;
 }
 
 .box{
@@ -29,6 +30,7 @@ body {
     position:absolute;
     left: 40%;
     top: 40%;
+    display: none;
 }
 
 #username{
