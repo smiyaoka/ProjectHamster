@@ -1,0 +1,967 @@
+/* Main background color a more neutral tone while still complimentary.  */ 
+body {
+	color: #1e121c; 	
+	background-color: #f2e1c6;
+	font-family: "Roboto", Arial, sans-serif; 
+	margin: 0px;
+}
+
+/*-----------------------------------------------*/
+#blackButton{
+    background-color: transparent;
+    border: none;
+}
+
+/* Login */
+.boxBG{
+    height:200px;
+    width:300px;
+    position:absolute;
+    left: 15%;
+    top: -1%;
+    display: none;
+}
+
+.box{
+    height:250px;
+    width:300px;
+    position:absolute;
+    left: 40%;
+    top: 40%;
+    display: none;
+}
+
+#username{
+    margin-bottom: 10%;
+}
+
+#password{
+    margin-bottom: 5%;
+    
+}
+
+.login-form{
+    margin-left: 3%;
+    margin-top: -10%;
+    position: absolute;
+}
+
+.close{
+    float:right;
+    margin-top: -7%;
+    margin-right: -8%;
+}
+/* No transitions. */ 
+.page-load{
+	-webkit-transition: none !important; 
+	-moz-transition: none !important; 
+	-o-transition: none !important; 
+	transition: none !important; 		
+}
+/* Default high contrast link text color. Remove text decorations to make it look less standard.  */ 
+a {
+	color: #7f1417; 
+	text-decoration: none; 
+	-webkit-transition: color 0.8s ease; 
+	-moz-transition: color 0.8s ease; 
+	-o-transition: color 0.8s ease; 
+	transition: color 0.8s ease; 
+}
+
+/* Default link color change to improve user experience. */ 
+a:hover {
+	color: #463b4d;	
+}
+
+/* Wrapper class sizes to fit page contents. */ 
+.page {
+	
+	width: 100%;
+	height: auto;
+}
+
+/* Contrasting background color that draws eye to header elements. */ 
+.header {
+	width: 100%;
+	height: 110px; 
+	display: block;
+	background-color: #f9ae9b;
+	margin-bottom: 40px; 
+}
+
+/* Centered container for header with default width. */ 
+.header-centre {
+	width: 1000px;
+	height: 110px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* Fixed size for container for logo and menu. */ 
+.image-menu {
+	height: 70px;
+	width:100px;
+	display: inline;
+}
+
+/* Wrapper for logo. */ 
+.sitelogo-cont{
+	display: inline;
+}
+
+/* Container to position logo. */ 
+.sitelogo-cont img{
+	height: 110px; 
+	float: left; 
+}
+
+/* Container to position tital. */
+.sitename {
+	margin-top: 40px;
+	height: 110px;
+	float: left;
+}
+
+/* Creating padding around the menu. */ 
+.menu-links {
+	padding-left: 370px; 
+	padding-top: 45px; 
+}
+
+/* Remove list formatting so menu links appear like they are not in a table. */ 
+.menu-links ul{
+	display: inline;
+	list-style-type:none; 
+	padding:0px; 
+	margin-top: 0px; 
+	margin-bottom: 20px; 
+}
+
+/* Display the list menu horizontally as it stretches across the header. */ 
+.menu-links ul li{
+	display: inline; 
+	margin-left: 50px; 
+}
+/* Format the menu bar links to be clear and high contrast on pink background. */
+.menu-links ul li a {
+	font-size: 24px; 
+	text-decoration: none; 	
+	font-family: "Russo One", Arial, sans-serif; 
+	color: #1e121c; 
+}
+
+/* Hover formatting to make user experience clearer. */
+.menu-links ul li a:hover {
+	color: #7f1417; 
+
+}
+/* Set position of login form. */
+.login {
+	float: right;
+	display: inline;
+	padding: 5px;
+    width: 50px;
+    margin-top: -0.3%;
+    margin-right: 10%;
+    background-color: coral;
+}
+
+#loginBT {
+    margin-left: 4.5px;
+    color: #FFFFFF;
+}
+
+/* Setting body container position. */
+.body {
+
+	width: 100%;
+	height: auto;
+	display: block;
+	
+	margin-left: 5px; 
+	margin-right: 5px; 
+}
+
+/* Centering the main content container for the page. */
+.body-centre {
+
+	width: 1000px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* Setting the size and diplay of the footer. */
+.footer {
+	margin-top: 40px; 
+	width: 100%;
+	height: 40px;
+	display: block;
+	font-size: 0.8em;
+	float:left;
+}
+
+/* Footer navigation links formatted to be more discrete. */
+.footer a{
+	margin-left: 10px; 
+	margin-right: 10px; 	
+	color:#1e121c;
+	text-decoration:none;
+
+	-webkit-transition: none !important; 
+	-moz-transition: none !important; 
+	-o-transition: none !important; 
+	transition: none !important; 	
+}
+
+/* Discrete hover formatting. */
+.footer a:hover{
+	color: #1e121c; 
+	text-decoration: underline; 
+}
+
+/* Footer container centered and size set. */
+.footer-centre {
+	width: 1000px;
+	height: 80px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+
+/* Default, consistent heading formatting for clarity. */
+h1, h2, h3, h4, h5, h6 {
+	margin-top: 0;
+	font-family: "Hammersmith One", Arial, sans-serif; 
+}
+
+/* --------------------------------------------- schedule bar ------------------------------------*/
+ 
+/* Wrapper class for tabs formatted for high contrast and  */
+#wrapper{
+    background-color: black;
+    width: 100%;
+}
+
+#homeSchedule h2{
+	text-align:center;
+}
+
+/*styling for all the a tag in wrapper*/
+#wrapper li a{
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+ 
+/*align the menu bar to left*/
+.scheduleTab li{
+    float:left;
+}
+ 
+/*styling for scheduleTab menu bar*/
+#wrapper ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+ 
+/* hover effect for scheduleTab menu bar*/
+#wrapper a:hover{
+     
+    background-color: red;
+}
+ 
+/*------------------ schedule bar-------------------*/
+ 
+/*aligns the images in all schedule tabs*/
+.dayScheduleTab li{
+    display: block;
+    float:left;
+    margin: 10px;
+}
+ 
+/*aligns the images in all schedule tabs*/
+.dayScheduleTab ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    text-align:center;
+}
+ 
+/* style for a tags in scheduleTab*/
+.dayScheduleTab li a{
+    text-decoration: none;
+    color: red;
+}
+ 
+/*for centring images*/
+#Sunday, #Monday{
+    width:70%;
+    margin:auto;
+}
+ 
+#Tuesday, #Wednesdays, #Friday, #Saturday{
+    width:86%;
+    margin:auto;
+}
+ 
+#Thursday{
+    width:55%;
+    margin:auto;
+}
+ 
+/* --------------------------------------------- schedule bar  end------------------------------------*/
+
+
+/*-------------------------------------------------- slide---------------------------*/
+
+.promotion{
+	/*slideshow*/
+	float:left;
+}
+
+.promotion h2{
+	text-align:center;
+}
+
+.mySlides{
+	/*border of slideshow*/
+	border-radius:5px;
+}
+
+.left{
+	/* slideshow  previous button*/
+	float:left;
+	border-style:solid;
+	border-width:2px;
+	border-radius: 5px;
+	padding:5px;
+	margin:2px;
+}
+.right{
+	/*slideshow next button*/
+	float:right;
+	border-style:solid;
+	border-width:2px;
+	border-radius: 5px;
+	padding:5px;
+	margin:2px;
+}
+.text:hover{
+	/*hover effect of both previous and next button on slide show*/
+	color:red; 
+	cursor:pointer;
+}
+.coveringForBlack{
+    display: none;
+}
+
+/*--------------------------- featured first impression begin----------------------*/
+
+#firstImpression2boxs{
+	/*featured first impression on the right of slide show*/
+	margin-left:500px;
+	text-align:center;
+}
+#firstImpression2boxs ul{
+	/*removing extra space */
+	list-style:none;
+	margin:0;
+   	padding: 0;
+}
+
+
+/*--------------------------- strawpoll begin----------------------*/
+#strawpoll{
+	/* embed strawpoll*/
+	margin-top:65px;
+
+}
+
+#strawpoll{
+	text-align:center;
+}
+
+
+/*--------------------------- featured review begin----------------------*/
+#review3boxes{
+	/*featured review under slide show*/
+	width:600px;
+	float:left;
+	margin-top:30px;
+}
+
+#review3boxes ul{
+	/*removing extra space*/
+	list-style:none;
+	margin:0;
+    padding: 0;
+}
+
+#review3boxes{
+	text-align:center;
+}
+/*-----------------------------first impression tab start -----------------------------*/
+
+/*independent styling for featured first impression */
+#firstImpression1{
+	background-image: url('../forumImages/urara.jpg');
+	background-repeat:no-repeat;
+	width:500px;
+	height:170px;
+	border-style:solid;
+	border-radius:25px;
+	border-color:red;
+	border-width:3px;
+	margin:15px;
+	padding:5px;
+	font-size: 14px;
+}
+
+/*styling for all the text inside of the firstImpression1*/
+#subFirstImpression1{
+	margin-left:180px;
+
+}
+
+/*independent styling for featured first impression */
+#firstImpression2{
+	background-image: url('../forumImages/urara.jpg');
+	background-repeat:no-repeat;
+	width:500px;
+	height:170px;
+	border-style:solid;
+	border-radius:25px;
+	border-color:red;
+	border-width:3px;
+	margin:15px;
+	padding:5px;
+	font-size: 14px;
+}
+
+/*styling for all the text inside of the firstImpression1*/
+#subFirstImpression2{
+	margin-left:180px;
+}
+
+/*For theme change*/
+#subFirstImpression4{
+	margin-left:180px;
+}
+#subFirstImpression5{
+	margin-left:180px;
+}
+#subFirstImpression6{
+	margin-left:180px;
+}
+
+
+
+
+
+/*---------------------------------------------- Anime Review Template Start -----------------------------*/
+
+/*style of the form on the page*/
+#animeReview {
+	width:800px;
+}
+
+/*style of text box in the form*/
+#animeReview input[type=text] {
+	padding: 12px 20px;
+	margin: 8px 0;
+}
+
+/*hover efect of text box in the form*/	
+#animeReview input[type=text]:focus {
+	background-color: #F0fff0;
+}
+
+/*style of submit button in the form*/
+#animeReview input[type=submit] {
+	width: 20%;
+	background-color: #F6851F;/*orange*/
+	color: white;
+	padding: 14px 20px;
+	margin: 8px 0;
+	border: none;
+	cursor: pointer;
+}
+
+/*hover efect of the submit button in the form*/
+#animeReview input[type=submit]:hover {
+	background-color: #F28888;/*light pink*/
+}
+
+/*style of review wrapper */	
+#reviewTemplate {
+	background-color: #f2f2f2;
+	padding: 20px;
+}
+
+/*style of title in the form*/
+#animeTitle {
+	height: 10px;
+	width: 25%;	
+}
+
+/*style of summary box in the form*/	
+#animeSummary {
+	height: 100px;
+	width: 25%;
+}
+
+/*style of text box in the form*/	
+textarea{
+	resize: none;
+	width: 70%;
+	height: 200px;
+	margin:10px;
+}
+
+/*hover effect of text box in the form*/	
+textarea:focus {
+	background-color: #f0fff0;
+}
+
+/*style for forum rule box*/
+#animeReviewRules{
+			
+	position: fixed;
+	left: 70em;
+	top: 160px;
+	width:180px;
+	height:300px;
+	border-style: solid;
+	border-color: black;
+	border-width:5px;
+	background-color:#f9ae9b;
+}
+		
+/*---------------------------------------------- Anime Review Template end------------------------------------*/
+
+
+		
+/*---------------------------------------------- Anime Discussion Template(using same template as anime review) ------------------------------------*/
+
+/*style for forum rule box*/
+#animeReviewRulesDiscussion{
+	position: fixed;
+	left: 70em;
+	top: 160px;
+	width:180px;
+	height:300px;
+	border-style: solid;
+	border-color: black;
+	border-width:5px;
+	background-color:#f9ae9b;
+}
+	
+/*---------------------------------------------- Anime Discussion Template end ------------------------------------*/
+
+/*****************forumTables******************************************/
+
+/* Border for forum to separate text. */	
+#forumTables td, #forumTables th {
+    border: 1px solid #7f1417  ;
+    padding: 8px;
+}
+
+/* Background color changes every 2nd row? */
+#forumTables tr:nth-child(even){background-color: #f2e1c6  ;}
+
+#forumTables tr:hover {background-color: #f9ae9b  ;}
+
+/* Spacing table. */
+#forumTables th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #f9ae9b  ;
+    color: black;
+    }
+    /****************forumTables1*****************************************/
+
+/* Same as the table above. */	
+#forumTables1 td, #forumTables1 th {
+    border: 1px solid #7f1417  ;
+    padding: 8px;
+}
+
+#forumTables1 tr:nth-child(even){background-color: #f2e1c6  ;}
+
+#forumTables1 tr:hover {background-color: #f9ae9b  ;}
+
+#forumTables1 th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #f9ae9b  ;
+    color: black;
+    }
+     /**********************forumTables2*****************************/
+    #forumTables2 td, #forumTables2 th {
+    border: 1px solid #7f1417  ;
+    padding: 8px;
+}
+
+#forumTables2 tr:nth-child(even){background-color: #f2e1c6  ;}
+
+#forumTables2 tr:hover {background-color: #f9ae9b  ;}
+
+#forumTables2 th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #f9ae9b  ;
+    color: black;
+    }
+	     /**********************forumTables3*****************************/
+    
+	/* Same as the table above. */
+	#forumTables3 td, #forumTables3 th {
+    border: 1px solid #7f1417  ;
+    padding: 8px;
+}
+
+#forumTables3 tr:nth-child(even){background-color: #f2e1c6  ;}
+
+#forumTables3 tr:hover {background-color: #f9ae9b  ;}
+
+#forumTables3 th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #f9ae9b  ;
+    color: black;
+    }
+	/*---------------------------------------------- Viewpost review start------------------------------------*/
+
+	/* Changes background color for viewpost review heading 2. */
+	#viewAnimeReview h2 {
+	background-color: #f9ae9b ;
+	color: black;
+	
+}
+
+/* Changes background color for viewpost review heading 4. */
+#viewAnimeReview h4 {
+	background-color: #f9ae9b ;
+	color: black;
+}
+/*---------------------------------------------- Viewpost review end------------------------------------*/
+/*---------------------------------------------- Viewpost discussion start------------------------------------*/
+
+/* Adds border to the discussion reply. */
+.discussionReply {
+	border-style: solid;
+	border-width: 2px;
+	margin: 10px;
+	padding: 5px;
+	border-color: #7f1417;
+}
+
+/* Formats the button to stand out. */
+#viewAnimeReview input[type=submit] {
+			width: 10%;
+			background-color: #F6851F;/*orange*/
+			color: black;
+			padding: 14px 20px;
+			margin: 8px 0;
+			border: none;
+			cursor: pointer;
+		}
+		
+/* Formats the button to stand out. */
+		#viewAnimeReview input[type=submit]:hover {
+			background-color: #F28888;/*light pink*/
+		}
+
+#postNew{
+	border-radius:5px;
+	border-width:2px;
+	border-color::#F6851F;
+	background-color:#F6851F;
+	padding:1px;
+}
+
+#postNew:hover{
+	background-color: #f9ae9b;
+}
+		/*---------------------------------------------- Viewpost discussion end------------------------------------*/
+/*---------------------------------------------- About start------------------------------------*/
+
+/* Sets spacing and dimensions for about container. */
+.about-centre {
+	width: 1000px;
+	margin-left: auto;
+	margin-right: auto;
+	
+}
+
+table {
+    width: 900px;
+}
+
+table th{
+    width: 225px;
+}
+
+/* Formats the heading for about. */
+.about-centre h4 {
+	color:black;
+	background-color: #f9ae9b;
+}
+/*<<<<<<< HEAD*/
+
+
+/*------------ACCOUNT MANAGEMENT CSS------------*/
+
+/* The account info section of the account management page. */
+#manage-account-info {
+	overflow: hidden; 
+	margin-bottom: 40px; 
+	display: inline-block;
+	width: 480px;
+}
+
+#manage-account-info p {
+	margin-top: 0px;	
+}
+
+/* The div that contains the avatar image. */
+#manage-avatar-div {
+	float: left; 
+	height: 128px;
+	width: 128px; 
+	margin-right: 10px; 
+}
+
+/* The avatar image. */
+#manage-avatar-div img {
+	height: 100%;
+	width: auto;
+}
+
+#manage-second-row {
+	overflow: hidden; 
+}
+
+#manage-change-avatar {
+	float: right; 
+	display: inline-block;
+	overflow: hidden;
+	width: 334px;
+}
+
+#manage-change-avatar h3 {
+	margin-bottom: 8px;
+}
+
+#manage-change-avatar form input {
+	margin-bottom: 7px;
+}
+
+#manage-second-row div{
+	width: 333px; 
+	float: left; 
+	margin-bottom: 10px; 
+}
+
+#manage-second-row #manage-delete-account {
+	width: 334px;
+	float: right; 
+}
+
+/* The headings where the user changes account information. */
+#manage-second-row h3 {
+	margin-bottom: 8px;
+}
+
+/* The inputs in the forms where the user changes account information. */
+#manage-second-row input {
+	margin-bottom: 8px; 
+}
+
+#error_avatar, #error_email, #error_password, #error_deletion {
+	color: #830000;
+	margin-top: 6px;
+}
+
+#password_strength_text {
+	font-weight: normal;
+	margin-bottom: 0px;
+}
+
+/*------------ACCOUNT MANAGEMNT FINISHED-----------*/
+
+/*------------REGISTRATION -------------------------*/
+
+#registration-div {
+	width: 620px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#registration-div input, #registration-div progress {
+	margin-bottom: 8px;
+}
+
+.registration-error {
+	display: inline-block;
+	color: #830000;
+	margin-left: 5px;
+}
+
+#password-strength-text {
+	font-weight: normal;
+	margin-bottom: 0px;
+}
+
+/*------------REGISTRATION FINISHED ---------------*/
+
+=======
+/*---------------------------------------------- Viewpost discussion end------------------------------------*/
+/*----------------------------------------------------------Start of Favorites Page-------------------------**/
+
+.adminPortrait {
+    margin-left: 20px;
+    margin-top: 20px;
+    float: left;
+    width: 300px;
+}
+
+.adminFavorites {
+    margin-top: 20px;
+    width: 600px;
+    float: left;
+    position: relative;
+}
+
+.adminBox {
+    width: 100%;
+    height: auto;
+    display: inline-block;
+    background-color: antiquewhite;
+    border: 1px solid orange;
+}
+
+.adminName {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 30px;
+    text-shadow: 2px 2px grey;
+    font-family: 20px;
+    font-weight: bold;
+}
+
+.favoriteItem {
+    margin-top: 0;
+}
+
+/* Hides the div for the favorites information. */
+.popUp {
+    height: 20px;
+    overflow: hidden;
+    transition: height 2s;
+}
+
+.popUp:hover {
+    height: 350px;
+}
+
+.adminName {
+    text-indent: 20px;
+}
+
+/*-------------------------------------End of Favorites Page-----------------------*/
+/**--------Hamster rating system start--------------**/
+
+.rating {
+    float:left;
+	height: 50px;
+}
+
+/* :not(:checked) is a filter, so that browsers that don’t support :checked don’t 
+   follow these rules. Every browser that supports :checked also supports :not(), so
+   it doesn’t make the test unnecessarily selective */
+.rating:not(:checked) > input {
+    position:absolute;
+    top:-9999px;
+    clip:rect(0,0,0,0);
+}
+
+.rating:not(:checked) > label {
+    float:right;
+    width:1em;
+    padding:0 .1em;
+    overflow:hidden;
+    white-space:nowrap;
+    cursor:pointer;
+    font-size:200%;
+    line-height:1.2;
+}
+
+.rating:not(:checked) > label:before {
+    content: url("../forumImages/hamster.PNG");
+}
+
+.rating > input:checked ~ label {
+    content: url("../forumImages/ham.gif");
+}
+
+.rating:not(:checked) > label:hover,
+.rating:not(:checked) > label:hover ~ label {
+    content: url("../forumImages/ham.gif");
+}
+
+.rating > input:checked + label:hover,
+.rating > input:checked + label:hover ~ label,
+.rating > input:checked ~ label:hover,
+.rating > input:checked ~ label:hover ~ label,
+.rating > label:hover ~ input:checked ~ label {
+    content: url("../forumImages/ham.gif");
+}
+
+.rating > label:active {
+    position:relative;
+    top:2px;
+    left:2px;
+}
+
+/* end of Lea's code */
+
+/*
+ * Clearfix from html5 boilerplate
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/*
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* my stuff */
+#status, button {
+    margin: 20px 0;
+}
+/**--------Hamster rating system end--------------**/
+>>>>>>> origin/master
