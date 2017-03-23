@@ -162,13 +162,23 @@ a:hover {
 	padding: 5px;
     width: 50px;
     margin-top: -0.3%;
-    margin-right: 10%;
+    margin-right: 1%;
     background-color: coral;
 }
 
 #loginBT {
     margin-left: 4.5px;
     color: #FFFFFF;
+}
+
+.registerB {
+	float: right;
+	display: inline;
+	padding: 5px;
+    width: 70px;
+    margin-top: -0.3%;
+    margin-right: 12%;
+    background-color: coral;
 }
 
 /* Setting body container position. */
