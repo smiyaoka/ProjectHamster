@@ -775,7 +775,7 @@ table th{
 }
 
 #error_avatar, #error_email, #error_password, #error_deletion {
-	color: red;
+	color: #830000;
 	margin-top: 6px;
 }
 
@@ -800,7 +800,7 @@ table th{
 
 .registration-error {
 	display: inline-block;
-	color: red;
+	color: #830000;
 	margin-left: 5px;
 }
 
