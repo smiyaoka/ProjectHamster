@@ -160,10 +160,10 @@ a:hover {
 	float: right;
 	display: inline;
 	padding: 5px;
-    width: 50px;
-    margin-top: -0.3%;
-    margin-right: 1%;
-    background-color: coral;
+    	width: 50px;
+	margin-top: -0.3%;
+	margin-right: 1%;
+	background-color: coral;
 }
 
 #loginBT {
@@ -175,10 +175,10 @@ a:hover {
 	float: right;
 	display: inline;
 	padding: 5px;
-    width: 70px;
-    margin-top: -0.3%;
-    margin-right: 12%;
-    background-color: coral;
+	width: 70px;
+	margin-top: -0.3%;
+	margin-right: 12%;
+	background-color: coral;
 }
 
 /* Setting body container position. */
