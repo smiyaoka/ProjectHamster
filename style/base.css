@@ -15,21 +15,21 @@ body {
 /* Login */
 .boxBG{
     background-image: url(forumImages/loginBG.png);
-    height:200em;
-    width:300em;
+    height:200px;
+    width:300px;
     position:absolute;
-    left: 15%;
-    top: -1%;
+    left: 5em;
+    top: 5em;
     display: none;
 }
 
 .box{
     background-image: url(forumImages/loginBG.png);
-    height:250em;
-    width:300em;
+    height:250px;
+    width:300px;
     position:absolute;
-    left: 40%;
-    top: 40%;
+    left: 5em;
+    top: 5em;
     display: none;
 }
 
