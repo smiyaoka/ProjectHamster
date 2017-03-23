@@ -1,0 +1,408 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1"> <!-- changes width based on viewing device -->
+		<title>Home</title>
+		<link type="text/css" rel="stylesheet" href="style/base.css">
+		<!--<link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css">-->
+		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Russo+One" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Hammersmith+One" rel="stylesheet">
+		
+		<script>
+		var active = document.querySelector(".page-load");
+		active.classList.remove("page-load");
+		
+		var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+		</script>
+		<!-- JQUERY -->
+		<script src="style/base2.js" type="text/javascript">
+		</script>
+		<script type="text/javascript" src="style/jquery-1.10.2.min.js">
+		</script>
+		<script>
+		$(document).ready(function(){
+		  $("#loginBT").click(function(){
+		    $(".box").fadeIn();
+		    $(".boxBG").fadeIn();
+		      });
+		});
+		$(document).ready(function(){
+		  $(".close").click(function(){
+		    $(".box").fadeOut();
+		    $(".boxBG").fadeOut();
+		      });
+		});
+		</script>
+        <script>
+            function mouseColorChange(obj) {
+               $('.text').css({color:"none"});
+               obj.style.color="red";
+            }
+            function mouseColorChange1(obj) {
+               $('.text').css({color:"none"});
+               obj.style.color="#000000";
+            }
+            function mouseColorChange2(obj) {
+               $('.text').css({color:"none"});
+               obj.style.color="#FFFFFF";
+            }
+        </script>
+		<script>
+		$(document).ready(function(){
+		  $(".blackB").click(function(){
+		    $(".coveringForBlack").fadeIn();
+		    $(".coveringForOther").fadeOut();
+		      });
+		});
+		$(document).ready(function(){
+		  $(".otherB").click(function(){
+		    $(".coveringForBlack").fadeOut();
+		    $(".coveringForOther").fadeIn();
+		      });
+		});
+		</script>
+	</head>
+	<body>
+		<button type="button" onclick="colorChangeBlack()" id="blackButton" class="blackB"><img src="forumImages/black.png" alt="blackBG" height="20" width="20"></button>
+		<button type="button" onclick="colorChangeBlue()" id="blackButton" class="otherB"><img src="forumImages/blue.png" alt="blackBG" height="20" width="20"></button>
+		<button type="button" onclick="colorChangeGreen()" id="blackButton" class="otherC"><img src="forumImages/green.png" alt="blackBG" height="20" width="20"></button>
+		<button type="button" onclick="colorChangePink()" id="blackButton" class="otherD"><img src="forumImages/pink.png" alt="blackBG" height="20" width="20"></button>
+		<buttom class="login"> <!-- Div containing login form. -->
+		    <a href="#" id="loginBT">Login</a>
+		</buttom>
+		<div class="boxBG">
+		    <img class="loginBG" src="forumImages/loginBG.png"/ width="800"/>
+		</div>
+		<div class="box">
+		    <img class="close" src="forumImages/close.png" width="30"/>
+		    <br>
+		    <form class="login-form" method="post" action="http://webdevfoundations.net/scripts/formdemo.asp">
+			<br>
+			<a id=usernameText>Username: </a></br>
+		    <input type="text" class="input" data-type="text" id="username" placeholder="username" name="username" required="required">
+		    <br>
+		    <a id=usernameText>Password: </a></br>
+		    <input type="password" class="input" data-type="text" id="password" placeholder="password" name="password" required="required">
+		    <Br>
+		    <input value="Log In" class="input2" type="submit" id="login-button">
+		    <input value="Register" class="input2" type="submit" id="register-button">
+		    <input value="Forgot Password" class="input2" type="submit" id="forgot-button">
+		    </form>
+		</div>
+		<div class="page"> <!-- Wrapper class for entire page. -->
+			<div class="header" id="header"> <!-- Wrapper class for header that is full page width. -->
+				<div class="header-centre"> <!-- Div centres contents. -->
+					<div class="image-menu"> <!-- Div groups logo, name, and menu. -->
+						<div class="sitelogo-cont"> <!-- Div contains logo. -->
+							<a href="index.html"><img src="forumImages/logo2.png" alt="Site Logo" height="120" width="180" id="site-logo"></a> <!-- Hyperlinked logo -->
+						</div>
+						<div class="sitename"> <!-- Div contains name. -->
+							<h1 id="PH">Project Hamster</h1>
+						</div>
+						<div class="menu-links fade-link"> <!-- Div containing menu button. -->
+							<ul>
+								<li><a href="index.html" id="home-button">Home</a></li>
+								<li><a href="about.html" id="about-button">About</a></li>
+								<li><a href="forum.html" id="forum-button">Forum</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="body"> <!-- Unique contents of each page go in here. -->
+				<div class="body-centre"> <!-- Majority of contents will go in here as it is centred -->
+				<h2 id="intro">Introduction</h2>
+				<p id="introText">The purpose of the website is anime reviews and reports, to promote Fandom discussion, allow the community to share first impressions and thoughts, poll opinions, and submit reviews. The vision is for the site to become the Rotten tomatoes for anime.</P> 
+					<div id="homeSchedule">
+					<h2 id="CSAS">Current Season Anime Schedule</h2>
+						<div id="wrapper">
+						
+						<ul class="scheduleTab">
+						  <li><a href="javascript:void(0)" onclick="openSchedule('Sunday')">Sunday</a></li>
+						  <li><a href="javascript:void(0)" onclick="openSchedule('Monday')">Monday</a></li>
+						  <li><a href="javascript:void(0)" onclick="openSchedule('Tuesday')">Tuesday</a></li>
+						  <li><a href="javascript:void(0)" onclick="openSchedule('Wednesdays')">Wednesday</a></li>
+						  <li><a href="javascript:void(0)" onclick="openSchedule('Thursday')">Thursday</a></li>
+						  <li><a href="javascript:void(0)" onclick="openSchedule('Friday')">Friday</a></li>
+						  <li><a href="javascript:void(0)" onclick="openSchedule('Saturday')">Saturday</a></li>
+						</ul>
+						</div>
+
+						<!--   Sunday tab   -->
+						<div id="Sunday" class="animeSchedule">
+						  <div class="dayScheduleTab">
+							<ul>
+
+								<li><a href="#"><img src="forumImages/san.jpg" alt="San Gatsu no Lion" height="200" width= "150"></a>
+								<p>San Gatsu no Lion</p></li>
+								<li><a href="#"><img src="forumImages/rewrite.jpg" alt="Rewrite 2nd Season" height="200" width= "150"></a>
+								<p>Rewrite 2nd Season</p></li>
+								<li><a href="#"><img src="forumImages/demi.jpg" alt="Demi-Chan" height="200" width= "150"></a>
+								<p>Demi-Chan</p></li>
+								<li><a href="#"><img src="forumImages/Nyanko.jpg" alt="Nyanko Days" height="200" width= "150"></a>
+								<p>Nyanko Days</p></li>									
+							</ul>
+						    </div>
+						</div>
+						<!-- Monday tab -->
+
+						<div id="Monday" class="animeSchedule" style="display:none">
+						  	<div class="dayScheduleTab">
+								<ul>
+									<li><a href="#"><img src="forumImages/zestiria.jpg" alt="Tales of Zestiria" height="200" width= "150"></a>
+									<p>Tales of Zestiria</p></li>
+									<li><a href="#"><img src="forumImages/witch.jpg" alt="Little Witch Academia" height="200" width= "150"></a>
+									<p>Little Witch Academia</p></li>
+									<li><a href="#"><img src="forumImages/gintama.jpg" alt="Gintama" height="200" width= "150"></a>
+									<p>Gintama</p></li>	
+									<li><a href="#"><img src="forumImages/beyblade.jpg" alt="Beyblade Burst" height="200" width= "150"></a>
+									<p>Beyblade Burst</p></li>										
+								</ul>
+						    </div>
+						</div>
+						<!-- Tuesday tab  -->
+						<div id="Tuesday" class="animeSchedule" style="display:none">
+						  		<div class="dayScheduleTab">
+									<ul>
+										<li><a href="#"><img src="forumImages/trickster.jpg" alt="Trickster" height="200" width= "150"></a>
+										<p>Trickster</p></li>
+										<li><a href="#"><img src="forumImages/gabrielDropout.jpg" alt="Gabriel DropOut" height="200" width= "150"></a>
+										<p>Gabriel DropOut</p></li>
+										<li><a href="#"><img src="forumImages/pedal.jpg" alt="Yowamushi Pedal" height="200" width= "150"></a>
+										<p>Yowamushi Pedal</p></li>
+										<li><a href="#"><img src="forumImages/kansatsu.jpg" alt="13-Ku Kansatsu-Ka" height="200" width= "150"></a>
+										<p>13-Ku Kansatsu-Ka</p></li>
+										<li><a href="#"><img src="forumImages/nobu.jpg" alt="Nobunaga no Shinobi" height="200" width= "150"></a>
+										<p>Nobunaga no Shinobi</p></li>
+										
+									</ul>
+								</div>
+						</div>
+						<!-- Wednesdays tab -->
+						<div id="Wednesdays" class="animeSchedule" style="display:none">
+						  		<div class="dayScheduleTab">
+									<ul>
+										<li><a href="#"><img src="forumImages/onmyouji.jpg" alt="Sousei no Onmyouji" height="200" width= "150"></a>
+										<p>Sousei no Onmyouji</p></li>
+										<li><a href="#"><img src="forumImages/handShaker.jpg" alt="Hand Shakers" height="200" width= "150"></a>
+										<p>Hand Shakers</p></li>
+										<li><a href="#"><img src="forumImages/neko.jpg" alt="Neko Neko Nihonshi" height="200" width= "150"></a>
+										<p>Neko Neko Nihonshi</p></li>
+										<li><a href="#"><img src="forumImages/oneRoom.jpg" alt="One Room" height="200" width= "150"></a>
+										<p>One Room</p></li>		
+										<li><a href="#"><img src="forumImages/akibaStrip.jpg" alt="Akiba Strip" height="200" width= "150"></a>
+										<p>Akiba Strip</p></li>											
+									</ul>
+								</div>						  
+						</div>
+						<!-- Thursday tab -->
+						<div id="Thursday" class="animeSchedule" style="display:none">
+						  		<div class="dayScheduleTab">
+									<ul>
+										<li><a href="#"><img src="forumImages/chaosChild.jpg" alt="Chaos Child" height="200" width= "150"></a>
+										<p>Chaos;Child</p></li>
+										<li><a href="#"><img src="forumImages/maidDragon.jpg" alt="Maid Dragon" height="200" width= "150"></a>
+										<p>Maid Dragon</p></li>
+										<li><a href="#"><img src="forumImages/konoSuba.jpg" alt="Kono Suba!" height="200" width= "150"></a>
+										<p>Kono Suba!</p></li>										
+
+									</ul>
+								</div>						  
+						</div>
+						<!-- Friday tab -->		
+						<div id="Friday" class="animeSchedule" style="display:none">
+						  		<div class="dayScheduleTab">
+									<ul>
+										<li><a href="#"><img src="forumImages/masamune.jpg" alt="Masamune-kun no Revenge" height="200" width= "150"></a>
+										<p>Masamune-kun</p></li>
+										<li><a href="#"><img src="forumImages/marginal.jpg" alt="Marginal#4" height="200" width= "150"></a>
+										<p>Marginal#4</p></li>
+										<li><a href="#"><img src="forumImages/kuzu.jpg" alt="Kuzu no Honkai" height="200" width= "150"></a>
+										<p>Kuzu no Honkai</p></li>
+										<li><a href="#"><img src="forumImages/urara.jpg" alt="Urara Meirochou" height="200" width= "150"></a>
+										<p>Urara Meirochou</p></li>
+										<li><a href="#"><img src="forumImages/seiren.jpg" alt="Seiren" height="200" width= "150"></a>
+										<p>Seiren</p></li>
+									</ul>
+								</div>						  
+						</div>
+						<!-- Saturday tab -->		
+						<div id="Saturday" class="animeSchedule" style="display:none">
+						  		<div class="dayScheduleTab">
+									<ul>
+										<li><a href="#"><img src="forumImages/fuuka.jpg" alt="Fuuka" height="200" width= "150"></a>
+										<p>Fuuka</p></li>
+										<li><a href="#"><img src="forumImages/jitensha.jpg" alt="Joshi Jitensha-bu" height="200" width= "150"></a>
+										<p>Joshi Jitensha-bu</p></li>
+										<li><a href="#"><img src="forumImages/striker.jpg" alt="Schoolgirl Stikers" height="200" width= "150"></a>
+										<p>Schoolgirl Stikers</p></li>
+										<li><a href="#"><img src="forumImages/sukeroku.jpg" alt="Sukeroku Futatabi-hen" height="200" width= "150"></a>
+										<p>Sukeroku Futatabi-hen</p></li>
+										<li><a href="#"><img src="forumImages/aoi.jpg" alt="Ao no Exorcist" height="200" width= "150"></a>
+										<p>Ao no Exorcist</p></li>
+									</ul>
+								</div>						  
+						</div>
+						
+						<!-- Javascript for anime shcedule table -->
+						<script>
+						function openSchedule(weekDay) {
+							var i;
+							var x = document.getElementsByClassName("animeSchedule");
+							for (i = 0; i < x.length; i++) {
+							   x[i].style.display = "none";  
+							}
+							document.getElementById(weekDay).style.display = "block";  
+						}
+						</script>
+						
+						</div>
+						<!-- anime schedule table end -->
+						
+					
+						<div class="promotion" style="max-width:500px">
+						<h2 id="AP">Anime Promotion</h2>
+						  <img class="mySlides" src="forumImages/FATE.gif" width="500"height="380">
+						  <img class="mySlides" src="forumImages/FA.gif" width="500"height="380">
+						  <img class="mySlides" src="forumImages/Konosuba_Why_is_it_Funny.gif" width="500"height="380">
+						  <div class="coveringForOther" style="width:100%">
+							<div class="left text" id="previousBT" onmouseover="mouseColorChange(this);" onmouseout="mouseColorChange1(this);" onclick="plusDivs(-1)">Previous</div>
+							<div class="right text" id="nextBT"  onmouseover="mouseColorChange(this);" onmouseout="mouseColorChange1(this);" onclick="plusDivs(1)">&nbsp;&nbsp;&nbsp;&nbsp;Next&nbsp;&nbsp;&nbsp;&nbsp;</div>
+						  </div>
+						  <div class="coveringForBlack" style="width:100%">
+							<div class="left text" id="previousBT1" onmouseover="mouseColorChange(this);" onmouseout="mouseColorChange2(this);" onclick="plusDivs(-1)">Previous</div>
+							<div class="right text" id="nextBT1"  onmouseover="mouseColorChange(this);" onmouseout="mouseColorChange2(this);" onclick="plusDivs(1)">&nbsp;&nbsp;&nbsp;&nbsp;Next&nbsp;&nbsp;&nbsp;&nbsp;</div>
+						  </div>
+						</div>
+
+						<script>
+						var slideIndex = 1;
+						showDivs(slideIndex);
+
+						function plusDivs(n) {
+						  showDivs(slideIndex += n);
+						}
+
+						function currentDiv(n) {
+						  showDivs(slideIndex = n);
+						}
+
+						function showDivs(n) {
+						  var i;
+						  var x = document.getElementsByClassName("mySlides");
+						  if (n > x.length) {slideIndex = 1}    
+						  if (n < 1) {slideIndex = x.length}
+						  for (i = 0; i < x.length; i++) {
+							 x[i].style.display = "none";  
+						  }
+
+						  x[slideIndex-1].style.display = "block";  
+
+						}
+						</script>
+
+
+						<div id="firstImpression2boxs">
+							<h2 id="FFIS"> Featured First Impression (Summary)</h2>
+							<ul>
+								<li>
+									<div id="firstImpression1">
+										<div id="subFirstImpression1">
+											Anime Title
+											<p>Lorem ipsum dolor sit amet, ut dicta primis sit, soleat deseruisse mei at. Sea at unum regione antiopam, per tincidunt argumentum ne, ad pri consequat forensibus expetendis. Dolor iudico signiferumque ne duo, per persius dolorum ei, quem docendi omittam ei his. </p>
+											<a id="LTFR" href="viewPostReview.html">Link to Full Review</a>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div id="firstImpression2">
+										<div id="subFirstImpression2">
+											Anime Title
+											<p> Te liber simul equidem mea. Mea enim docendi partiendo ad, saepe essent eum ne. Cum quod tacimates dissentias te, inani scriptorem instructior ei est. Et clita interesset has, dolore graece vix at.</p>
+											<a id="LTFR1" href="viewPostReview.html">Link to Full Review</a>
+										</div>
+									</div>
+								</li>
+
+							</ul>
+						</div>
+
+						
+							<div id="review3boxes">
+								<h2 id="FARS"> Featured Anime Review (Summary)</h2>
+								<ul>
+									<li>
+										<div id="firstImpression1">
+											<div id="subFirstImpression4">
+												Anime Title
+												<p id="FARS1">At pri iisque mentitum, duo ei sale denique verterem. Sea legere ponderum te, cu pri euripidis sententiae. Sonet latine cu vix, vel ex solet tractatos. Eos solet invidunt democritum no, appellantur suscipiantur complectitur ei vis.</p>
+												<a id="LTFR2" href="viewPostReview.html">Link to Full Review</a>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div id="firstImpression2">
+											<div id="subFirstImpression5">
+												Anime Title
+												<p> Paulo interpretaris no mea, eu autem vivendo repudiandae nam, cu amet maluisset vix. Vim eu patrioque intellegat, ei mollis utamur appellantur vim. Est ei sale possim, idque accusamus aliquando ea nam. Sint magna eam id, ut sed graecis deseruisse, sumo ubique ei vis.</p>
+												<a id="LTFR3" href="viewPostReview.html">Link to Full Review</a>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div id="firstImpression2">
+											<div id="subFirstImpression6">
+												Anime Title
+												<p> Mollis accusam suscipit quo cu, his no debet putent delectus. An mel discere facilis efficiendi. Vis no epicuri efficiantur suscipiantur, mei quando soleat ea, debet paulo rationibus vis te. Pro posse quaestio et, eos saepe blandit facilisis te, quo ut possim habemus delicata. </p>
+												<a id="LTFR4" href="viewPostReview.html">Link to Full Review</a>
+											</div>
+										</div>
+									</li>
+
+								</ul>
+							</div>
+							
+							<div id="strawpoll">
+							<h2 id="FP">Featured Poll </h2>
+							<iframe src="http://www.strawpoll.me/embed_1/12571116" style="width:400px; height:510px; border:0;"></iframe>
+							</div>
+						
+					
+
+						</div>						
+				</div>
+				
+
+
+			</div>
+			<div class="footer"> <!-- Full width container for the footer -->
+				<div class="footer-centre" id="FC"> <!-- Centered footer for other footer divs -->
+					<a href="index.html" id="home-small">Home</a>
+					<a href="about.html" id="about-small">About</a>
+					<a href="termOfService.html" id="tos-small">Terms of Service</a>
+					<a href="privacyPolicy.html" id="privacy-small">Privacy Policy</a>
+					<a href="forum.html" id="forum-small">Forum</a>
+					<a href="account.html" id="account-manage-small">Account Management</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
