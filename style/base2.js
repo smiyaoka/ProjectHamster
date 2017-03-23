@@ -23,6 +23,16 @@ function colorChangeBlack(){
     document.getElementById("subFirstImpression1").style.color="white"
     document.getElementById("subFirstImpression2").style.color="white"
     document.getElementById("FP").style.color="white"
+    document.getElementById("FARS1").style.color="white"
+    document.getElementById("FARS2").style.color="white"
+    document.getElementById("FARS3").style.color="white"
+    document.getElementById("home-small").style.color="white"
+    document.getElementById("about-small").style.color="white"
+    document.getElementById("tos-small").style.color="white"
+    document.getElementById("privacy-small").style.color="white"
+    document.getElementById("forum-small").style.color="white"
+    document.getElementById("account-manage-small").style.color="white"
+    document.getElementById("home-small").style.color="white"
 }
 function colorChangeBlue(){
     document.body.style.backgroundColor="#58D3F7";
