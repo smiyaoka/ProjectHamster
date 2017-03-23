@@ -15,8 +15,8 @@ body {
 /* Login */
 .boxBG{
     background-image: url(forumImages/loginBG.png);
-    height:200px;
-    width:300px;
+    height:200em;
+    width:300em;
     position:absolute;
     left: 15%;
     top: -1%;
@@ -25,8 +25,8 @@ body {
 
 .box{
     background-image: url(forumImages/loginBG.png);
-    height:250px;
-    width:300px;
+    height:250em;
+    width:300em;
     position:absolute;
     left: 40%;
     top: 40%;
