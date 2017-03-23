@@ -825,7 +825,12 @@ table th{
 =======
 /*---------------------------------------------- Viewpost discussion end------------------------------------*/
 /*----------------------------------------------------------Start of Favorites Page-------------------------**/
-
+#nickPortrait, #stephPortrait, #seanPortrait, #simonPortrait, #adamPortrait{
+	margin-left: 20px;
+    margin-top: 20px;
+    float: left;
+    width: 300px;
+}
 .adminPortrait {
     margin-left: 20px;
     margin-top: 20px;
