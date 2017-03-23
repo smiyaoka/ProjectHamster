@@ -20,7 +20,7 @@ body {
     position:absolute;
     left: 5em;
     top: 5em;
-    display: none;
+    /display: none;
 }
 
 .box{
@@ -30,7 +30,7 @@ body {
     position:absolute;
     left: 5em;
     top: 5em;
-    display: none;
+    /display: none;
 }
 
 #username{
