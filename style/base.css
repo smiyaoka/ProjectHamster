@@ -18,8 +18,8 @@ body {
     height:200px;
     width:300px;
     position:absolute;
-    left: 5em;
-    top: 5em;
+    left: 10em;
+    top: 10em;
 }
 
 .box{
@@ -27,8 +27,8 @@ body {
     height:250px;
     width:300px;
     position:absolute;
-    left: 5em;
-    top: 5em;
+    left: 8em;
+    top: 4em;
 }
 
 #username{
