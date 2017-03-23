@@ -115,7 +115,7 @@
 			return true;
 		}
 		
-		function validatePasswordSubmit(inputId, passwordId, errorId) {							
+		function validatePasswordSubmit(inputId, inputId2, passwordId, errorId) {							
 			if (!testPasswordValidChar(inputId)) {
 				event.preventDefault();
 				$(errorId).innerHTML = "The password can only contain letters, numbers, and the symbols !@#$%^&*";				
@@ -125,7 +125,12 @@
 				event.preventDefault();
 				$(errorId).innerHTML = "The password must have at least <br>8 characters.";				
 				return false; 
-			} 					
+			}
+			if (!testPasswordMatch(inputId, inputId2)) {
+				event.preventDefault();
+				$(errorId).innerHTML = "Your new password does not match the other new password.";
+				return false;
+			}
 			if (!testCorrectPassword(passwordId)) {
 				event.preventDefault();
 				$(errorId).innerHTML = "Incorrect Password <br><br> ";				
@@ -186,6 +191,75 @@
 			} else {
 				$(textId).innerHTML = "Password Strength: Low";
 			}
+		}
+		
+		function testPasswordMatch(passwordId, passwordId2) {
+			return $(passwordId).value == $(passwordId2).value || ($(passwordId).value == null && $(passwordId2).value == null);
+		}
+		
+		function validatePasswordMatch(passwordId, passwordId2, passwordErrorId2) {
+			if (!testPasswordMatch(passwordId, passwordId2)) {
+				event.preventDefault();
+				$(passwordErrorId2).innerHTML = "The passwords do not match.";
+				return false; 
+			}
+			$(passwordErrorId2).innerHTML = "";
+			return true; 
+		}
+		
+		function testUsernameValid(id) {
+			if ($(id).value == null) {
+				return false; 
+			}			
+			return $(id).value != "" && !/[^a-zA-Z0-9]/.test($(id).value);;			
+		}
+		
+		function validateUsername(usernameId, errorId) {
+			if (!testUsernameValid(usernameId)) {
+				$(errorId).innerHTML = "Your username must only have numbers or letters.";
+				return false; 
+			}
+			$(errorId).innerHTML = "";
+			return true; 
+		}
+		
+		function validateRegistrationSubmit(emailId, emailErrorId, usernameId, usernameErrorId, passwordId, passwordErrorId, passwordId2, passwordErrorId2, avatarId, avatarErrorId) {
+			var valid = true; 
+			
+			if(!validateEmail(emailId, emailErrorId)) {
+				event.preventDefault();
+				valid = false; 
+			}
+			
+			if (!validateUsername(usernameId, usernameErrorId)) {
+				event.preventDefault();
+				valid = false; 
+			}
+			
+			if (!testPasswordValidChar(passwordId) || !testPasswordLength(passwordId)) {
+				event.preventDefault();
+				$(passwordErrorId).innerHTML = !testPasswordValidChar(passwordId)
+					? "Only a-z, A-Z, 0-9, or !@#$%^&* allowed."
+						: "The password must have at least 8 characters.";								
+				valid = false; 
+			} else {
+				$(passwordErrorId).innerHTML = "";
+			}
+						
+			if (!validatePasswordMatch(passwordId, passwordId2, passwordErrorId2)) {
+				event.preventDefault();
+				valid = false; 
+			}
+			
+			
+			if(!testAvatarInputEmpty(avatarId) && !testAvatarValid(avatarId)) {
+				event.preventDefault();
+				$(avatarErrorId).innerHTML = 
+					testAvatarInputEmpty(avatarId) ? 
+						"" : "The file needs to be a png, jpg/jpeg, or gif image.";				
+				valid = false; 
+			}
+			return valid;
 		}
 		
 		</script>
@@ -268,7 +342,7 @@
 						<!-- Where the user changes the password. -->	
 						<div id="manage-change-password">
 							<h3>Change Password</h3> 	
-							<form method="post" action="http://webdevfoundations.net/scripts/formdemo.asp" onsubmit="return validatePasswordSubmit('manage_new_password', 'manage_password_for_password', 'error_password');">
+							<form method="post" action="http://webdevfoundations.net/scripts/formdemo.asp" onsubmit="return validatePasswordSubmit('manage_new_password', 'manage_new_password2', 'manage_password_for_password', 'error_password');">
 								<label for="manage_new_password">New Password: </label><br>
 								<input type="password" id="manage_new_password" name="newPassword" value="" onkeyup="updatePasswordStrength('manage_new_password', 'password_strength_bar', 'password_strength_text')"><br>
 								
@@ -276,6 +350,10 @@
 									<h5 id="password_strength_text">Password Strength: </h5>
 									<progress id="password_strength_bar" value ="0" max="4"></progress>
 								</div>
+								
+								<label for="manage_new_password2">Retype New Password: </label><br>
+								<input type="password" id="manage_new_password2" name="newPassword2" value="">
+								<br>
 								
 								<label for="manage_password_for_password">Current Password: </label><br>
 								<input type="password" id="manage_password_for_password" name="passwordPasswordChange" value=""><br>
