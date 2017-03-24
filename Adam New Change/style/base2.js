@@ -31,6 +31,12 @@ function colorChangeBlack(){
     document.getElementById("LTFR4").style.color="#ffff4d"
     document.getElementById("previousBT1").style.color="white"
     document.getElementById("nextBT1").style.color="white"
+    document.getElementById("home-small").style.color="white"
+    document.getElementById("about-small").style.color="white"
+    document.getElementById("tos-small").style.color="white"
+    document.getElementById("privacy-small").style.color="white"
+    document.getElementById("forum-small").style.color="white"
+    document.getElementById("account-manage-small").style.color="white"
 }
 function colorChangeBlue(){
     document.body.style.backgroundColor="#58D3F7";
@@ -65,6 +71,12 @@ function colorChangeBlue(){
     document.getElementById("LTFR4").style.color="red";
     document.getElementById("previousBT").style.color="#000000";
     document.getElementById("nextBT").style.color="#000000";
+    document.getElementById("home-small").style.color="#000000"
+    document.getElementById("about-small").style.color="#000000"
+    document.getElementById("tos-small").style.color="#000000"
+    document.getElementById("privacy-small").style.color="#000000"
+    document.getElementById("forum-small").style.color="#000000"
+    document.getElementById("account-manage-small").style.color="#000000"
 }
 function colorChangePink(){
     document.body.style.backgroundColor="#f2e1c6";
@@ -99,6 +111,12 @@ function colorChangePink(){
     document.getElementById("LTFR4").style.color="#7f1417";
     document.getElementById("previousBT").style.color="#000000";
     document.getElementById("nextBT").style.color="#000000";
+    document.getElementById("home-small").style.color="#000000"
+    document.getElementById("about-small").style.color="#000000"
+    document.getElementById("tos-small").style.color="#000000"
+    document.getElementById("privacy-small").style.color="#000000"
+    document.getElementById("forum-small").style.color="#000000"
+    document.getElementById("account-manage-small").style.color="#000000"
 }
 function colorChangeGreen(){
     document.body.style.backgroundColor="#82FA58";
@@ -133,4 +151,10 @@ function colorChangeGreen(){
     document.getElementById("LTFR4").style.color="#7f1417";
     document.getElementById("previousBT").style.color="#000000";
     document.getElementById("nextBT").style.color="#000000";
+    document.getElementById("home-small").style.color="#000000"
+    document.getElementById("about-small").style.color="#000000"
+    document.getElementById("tos-small").style.color="#000000"
+    document.getElementById("privacy-small").style.color="#000000"
+    document.getElementById("forum-small").style.color="#000000"
+    document.getElementById("account-manage-small").style.color="#000000"
 }
