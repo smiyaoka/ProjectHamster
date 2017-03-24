@@ -248,6 +248,9 @@ h1, h2, h3, h4, h5, h6 {
 	font-family: "Hammersmith One", Arial, sans-serif; 
 }
 
+#intro{
+	text-align:center;
+}
 /* --------------------------------------------- schedule bar ------------------------------------*/
  
 /* Wrapper class for tabs formatted for high contrast and  */
