@@ -68,7 +68,7 @@
 			if (password == null) {
 				return false; 
 			}
-			return password.length >= 8;
+			return ((password.length >= 8) && (password.length <= 20));
 		}
 		
 		function testPasswordValidChar(id) {
@@ -203,7 +203,7 @@
 		}
 		
 		function testUsernameValid(id) {
-			if ($(id).value == null) {
+			if (($(id).value == null) || ($(id).value.length >= 10)) {
 				return false; 
 			}			
 			return $(id).value != "" && !/[^a-zA-Z0-9]/.test($(id).value);;			
@@ -211,7 +211,7 @@
 		
 		function validateUsername(usernameId, errorId) {
 			if (!testUsernameValid(usernameId)) {
-				$(errorId).innerHTML = "Your username must only have numbers or letters.";
+				$(errorId).innerHTML = "Your username must only have numbers or letters and 10 characters or less.";
 				return false; 
 			}
 			$(errorId).innerHTML = "";
