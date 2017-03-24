@@ -123,7 +123,7 @@
 			}
 			if (!testPasswordLength(inputId)) {
 				event.preventDefault();
-				$(errorId).innerHTML = "The password must have at least <br>8 characters.";				
+				$(errorId).innerHTML = "The password must be between 8-20 characters.";				
 				return false; 
 			} 					
 			if (!testCorrectPassword(passwordId)) {
@@ -171,7 +171,7 @@
 				return;
 			}
 			if (!testPasswordLength(passwordId)) {
-				$(textId).innerHTML = "Password must be at least 8 characters";
+				$(textId).innerHTML = "The password must be between 8-20 characters.";
 				$(barId).value = 0;
 				return;
 			}
@@ -235,7 +235,7 @@
 				event.preventDefault();
 				$(passwordErrorId).innerHTML = !testPasswordValidChar(passwordId)
 					? "Only a-z, A-Z, 0-9, or !@#$%^&* allowed."
-						: "The password must have at least 8 characters.";								
+						: "The password must be between 8-20 characters.";								
 				valid = false; 
 			} else {
 				$(passwordErrorId).innerHTML = "";
