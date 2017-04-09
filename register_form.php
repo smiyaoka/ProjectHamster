@@ -5,7 +5,7 @@
 
 	// Connect to server and select database.
 	($GLOBALS["___mysqli_ston"] = mysqli_connect(DB_HOST,  DB_USER,  DB_PASSWORD))or die("cannot connect, error: ".((is_object($GLOBALS["___mysqli_ston"])) ? mysqli_error($GLOBALS["___mysqli_ston"]) : (($___mysqli_res = mysqli_connect_error()) ? $___mysqli_res : false)));
-	((bool)mysqli_query($GLOBALS["___mysqli_ston"], "USE " . constant('DB_DATABASE')))or die("cannot select DB, error: ".((is_object($GLOBALS["___mysqli_ston"])) ? mysqli_error($GLOBALS["___mysqli_ston"]) : (($___mysqli_res = mysqli_connect_error()) ? $___mysqli_res : false)));
+	((bool)mysqli_query($GLOBALS["___mysqli_ston"], "USE " . constant('DB_DATABASE')))or die("cannot select DB, error: ".((is_object($GLOBALS["___mysqli_ston"])) ? mysqli_error($GLOBALS["___mysqli_ston"]) : (($___mysqli_res = mysqli_connect_error()) ? $___mysqli_res : false)));	
 ?>
 
 <!doctype html>
@@ -293,8 +293,19 @@
 			<div class="body"> <!-- Unique contents of each page go in here. -->
 				<div class="body-centre"> <!-- Majority of contents will go in here as it is centred -->
 				<div id="registration-div">						
-					<h2>Make an Account</h2>					
-					
+					<h2>Make an Account</h2>											
+						<div>
+							<?php
+								if( isset($_SESSION['ERRMSG_ARR']) && is_array($_SESSION['ERRMSG_ARR']) && count($_SESSION['ERRMSG_ARR']) >0 ) {
+									echo '<ul class="err">';
+									foreach($_SESSION['ERRMSG_ARR'] as $msg) {
+										echo '<li>',$msg,'</li>'; 
+									}
+									echo '</ul>';
+									unset($_SESSION['ERRMSG_ARR']);
+								}
+							?>						
+						</div>						
 						<form method="post" action="register.php" onsubmit="return validateRegistrationSubmit('register_email', 'registration-error-email', 'register_username', 'registration-error-username', 'register_password', 'registration-error-password', 'register_password2', 'registration-error-password2', 'register_avatar', 'registration-error-avatar');">		
 							
 							<label for="register_email">Email: </label><br>
@@ -302,7 +313,7 @@
 								<span id="registration-error-email" class="registration-error"></span>
 								<br>
 							<label for="register_username">Username: </label><br>
-								<input type="text" id="register_username" name="registerUsername" value="" onkeyup="validateUsername('register_username', 'registration-error-username')">
+								<input type="text" id="register_username" name="registerUsername" value="" onchange="validateUsername('register_username', 'registration-error-username')">
 								<span id="registration-error-username" class="registration-error"></span>
 								<br>
 							<label for="register_password">Password: </label><br>
@@ -349,7 +360,7 @@
 
 <script> 
 	<?php 
-	if (!isLoggedIn()) {
+	if (isLoggedIn()) {
 		echo "document.getElementsByClassName('body-centre')[0].innerHTML = '<center>Please log out before registering a new account.</centre>'";
 	}
 	?>	

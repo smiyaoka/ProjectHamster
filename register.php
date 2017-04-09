@@ -41,9 +41,15 @@
 	if($login == '') {
 		$errmsg_arr[] = 'Login ID missing';
 		$errflag = true;
+	} else if(strlen($login) >= 10 || preg_match('/[^a-zA-Z0-9]/', $login) == 1) {
+		$errmsg_arr[] = 'Invalid username';
+		$errflag = true;
 	}
 	if($password == '') {
 		$errmsg_arr[] = 'Password missing';
+		$errflag = true;
+	} else if(strlen($password) < 8 || strlen($password) > 20 || preg_match('/[^a-zA-Z0-9\!\@\#\$\%\^\&\*]/', $password) == 1) {
+		$errmsg_arr[] = 'Invalid password';
 		$errflag = true;
 	}
 	if($cpassword == '') {
@@ -61,7 +67,7 @@
 		$result = mysqli_query($GLOBALS["___mysqli_ston"], $qry);
 		if($result) {
 			if(mysqli_num_rows($result) > 0) {
-				$errmsg_arr[] = 'Login ID already in use';
+				$errmsg_arr[] = 'The username is already taken.';
 				$errflag = true;
 			}
 			@((mysqli_free_result($result) || (is_object($result) && (get_class($result) == "mysqli_result"))) ? true : false);
