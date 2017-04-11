@@ -228,13 +228,8 @@
 			return true; 
 		}
 		
-		function validateRegistrationSubmit(emailId, emailErrorId, usernameId, usernameErrorId, passwordId, passwordErrorId, passwordId2, passwordErrorId2, avatarId, avatarErrorId) {
+		function validateRegistrationSubmit(usernameId, usernameErrorId, passwordId, passwordErrorId, passwordId2, passwordErrorId2) {
 			var valid = true; 
-			
-			if(!validateEmail(emailId, emailErrorId)) {
-				event.preventDefault();
-				valid = false; 
-			}
 			
 			if (!validateUsername(usernameId, usernameErrorId)) {
 				event.preventDefault();
@@ -256,14 +251,6 @@
 				valid = false; 
 			}
 			
-			
-			if(!testAvatarInputEmpty(avatarId) && !testAvatarValid(avatarId)) {
-				event.preventDefault();
-				$(avatarErrorId).innerHTML = 
-					testAvatarInputEmpty(avatarId) ? 
-						"" : "The file needs to be a png, jpg/jpeg, or gif image.";				
-				valid = false; 
-			}
 			return valid;
 		}
 		
@@ -306,12 +293,8 @@
 								}
 							?>						
 						</div>						
-						<form method="post" action="register.php" onsubmit="return validateRegistrationSubmit('register_email', 'registration-error-email', 'register_username', 'registration-error-username', 'register_password', 'registration-error-password', 'register_password2', 'registration-error-password2', 'register_avatar', 'registration-error-avatar');">		
+						<form method="post" action="register.php" onsubmit="return validateRegistrationSubmit('register_username', 'registration-error-username', 'register_password', 'registration-error-password', 'register_password2', 'registration-error-password2');">		
 							
-							<label for="register_email">Email: </label><br>
-								<input type="text" id="register_email" name="registerEmail" value="" onchange="validateEmail('register_email', 'registration-error-email')">
-								<span id="registration-error-email" class="registration-error"></span>
-								<br>
 							<label for="register_username">Username: </label><br>
 								<input type="text" id="register_username" name="registerUsername" value="" onchange="validateUsername('register_username', 'registration-error-username')">
 								<span id="registration-error-username" class="registration-error"></span>
@@ -328,10 +311,6 @@
 								<label for="register_password2">Retype Password: </label><br>
 								<input type="password" id="register_password2" name="registerPassword2" value="" onchange="validatePasswordMatch('register_password', 'register_password2', 'registration-error-password2')">
 								<span id="registration-error-password2" class="registration-error"></span>
-							<br>
-							<label for="register_avatar">Upload an Avatar (optional): </label><br>
-							<input type="file" id="register_avatar" name="registerAvatar" onchange="validateAvatar('register_avatar', 'registration-error-avatar')">
-							<span id="registration-error-avatar" class="registration-error"></span>
 							
 							<br>
 							<br>
@@ -351,7 +330,6 @@
 					<a href="termOfService.html" id="tos-small">Terms of Service</a>
 					<a href="privacyPolicy.html" id="privacy-small">Privacy Policy</a>
 					<a href="forum.html" id="forum-small">Forum</a>
-					<a href="account.html" id="account-manage-small">Account Management</a>
 				</div>
 			</div>
 		</div>
